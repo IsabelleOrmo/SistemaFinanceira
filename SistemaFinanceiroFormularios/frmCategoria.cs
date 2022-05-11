@@ -15,9 +15,14 @@ namespace SistemaFinanceiroFormularios
         private bool Insercao = false;
         private bool Edicao = false;
 
+        private Categoria categoria = new Categoria();
+        private List<Categoria> lstCategoria = new List<Categoria>();
+        private BindingSource bsCategoria;
+
         public frmCategoria()
         {
             InitializeComponent();
+            lstCategoria = categoria.GeraCategorias();
             
         }
 
@@ -135,12 +140,23 @@ namespace SistemaFinanceiroFormularios
             dgCategoria.MultiSelect = false;
             dgCategoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // FullRow e LowTra
 
+            carregaGridCategoria();
+
 
 
             categoriaTextNome.Text = "Combustível";
             categoriaTextDescricao.Text = "Consumo de combustivéis em um ano pelo consumidor";
             categoriaRadioTipoDespesa.Checked = true;
             categoriaCheckStatus.Checked = true;
+        }
+
+        private void carregaGridCategoria()
+        {
+            bsCategoria = new BindingSource();
+            bsCategoria.DataSource = lstCategoria;
+            // dgCategoria.Rows.Clear();
+            dgCategoria.DataSource = bsCategoria;
+            dgCategoria.Refresh();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
