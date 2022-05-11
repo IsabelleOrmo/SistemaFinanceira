@@ -1,7 +1,7 @@
 ﻿
 namespace SistemaFinanceiroFormularios
 {
-    partial class Categoria
+    partial class frmCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@ namespace SistemaFinanceiroFormularios
         /// </summary>
         private void InitializeComponent()
         {
-            this.categoriaBotaoNovo = new System.Windows.Forms.Button();
-            this.categoriaBotaoAlterar = new System.Windows.Forms.Button();
-            this.categoriaBotaoExcluir = new System.Windows.Forms.Button();
-            this.categoriaBotaoSalvar = new System.Windows.Forms.Button();
-            this.categoriaBotaoCancelar = new System.Windows.Forms.Button();
-            this.categoriaGroupInfo = new System.Windows.Forms.GroupBox();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.grpCategoria = new System.Windows.Forms.GroupBox();
             this.categoriaCheckStatus = new System.Windows.Forms.CheckBox();
             this.categoriaLabelStatus = new System.Windows.Forms.Label();
             this.categoriaRadioTipoDespesa = new System.Windows.Forms.RadioButton();
@@ -44,78 +44,78 @@ namespace SistemaFinanceiroFormularios
             this.categoriaTextNome = new System.Windows.Forms.TextBox();
             this.categoriaLabelDescricao = new System.Windows.Forms.Label();
             this.categoriaLabelNome = new System.Windows.Forms.Label();
-            this.categoriaGroupInfo.SuspendLayout();
+            this.grpCategoria.SuspendLayout();
             this.SuspendLayout();
             // 
-            // categoriaBotaoNovo
+            // btnNovo
             // 
-            this.categoriaBotaoNovo.Location = new System.Drawing.Point(12, 215);
-            this.categoriaBotaoNovo.Name = "categoriaBotaoNovo";
-            this.categoriaBotaoNovo.Size = new System.Drawing.Size(93, 29);
-            this.categoriaBotaoNovo.TabIndex = 6;
-            this.categoriaBotaoNovo.Text = "Novo";
-            this.categoriaBotaoNovo.UseVisualStyleBackColor = true;
-            this.categoriaBotaoNovo.Click += new System.EventHandler(this.categoriaBotaoNovo_Click);
+            this.btnNovo.Location = new System.Drawing.Point(12, 437);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(93, 29);
+            this.btnNovo.TabIndex = 6;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
-            // categoriaBotaoAlterar
+            // btnAlterar
             // 
-            this.categoriaBotaoAlterar.Location = new System.Drawing.Point(111, 215);
-            this.categoriaBotaoAlterar.Name = "categoriaBotaoAlterar";
-            this.categoriaBotaoAlterar.Size = new System.Drawing.Size(93, 29);
-            this.categoriaBotaoAlterar.TabIndex = 7;
-            this.categoriaBotaoAlterar.Text = "Alterar";
-            this.categoriaBotaoAlterar.UseVisualStyleBackColor = true;
-            this.categoriaBotaoAlterar.Click += new System.EventHandler(this.categoriaBotaoAlterar_Click);
+            this.btnAlterar.Location = new System.Drawing.Point(111, 437);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(93, 29);
+            this.btnAlterar.TabIndex = 7;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // categoriaBotaoExcluir
+            // btnExcluir
             // 
-            this.categoriaBotaoExcluir.Location = new System.Drawing.Point(259, 215);
-            this.categoriaBotaoExcluir.Name = "categoriaBotaoExcluir";
-            this.categoriaBotaoExcluir.Size = new System.Drawing.Size(93, 29);
-            this.categoriaBotaoExcluir.TabIndex = 8;
-            this.categoriaBotaoExcluir.Text = "Excluir";
-            this.categoriaBotaoExcluir.UseVisualStyleBackColor = true;
-            this.categoriaBotaoExcluir.Click += new System.EventHandler(this.categoriaBotaoExcluir_Click);
+            this.btnExcluir.Location = new System.Drawing.Point(259, 437);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(93, 29);
+            this.btnExcluir.TabIndex = 8;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // categoriaBotaoSalvar
+            // btnSalvar
             // 
-            this.categoriaBotaoSalvar.Location = new System.Drawing.Point(358, 215);
-            this.categoriaBotaoSalvar.Name = "categoriaBotaoSalvar";
-            this.categoriaBotaoSalvar.Size = new System.Drawing.Size(93, 29);
-            this.categoriaBotaoSalvar.TabIndex = 9;
-            this.categoriaBotaoSalvar.Text = "Salvar";
-            this.categoriaBotaoSalvar.UseVisualStyleBackColor = true;
-            this.categoriaBotaoSalvar.Visible = false;
-            this.categoriaBotaoSalvar.Click += new System.EventHandler(this.categoriaBotaoSalvar_Click);
+            this.btnSalvar.Location = new System.Drawing.Point(358, 437);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(93, 29);
+            this.btnSalvar.TabIndex = 9;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Visible = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // categoriaBotaoCancelar
+            // btnCancelar
             // 
-            this.categoriaBotaoCancelar.Location = new System.Drawing.Point(457, 215);
-            this.categoriaBotaoCancelar.Name = "categoriaBotaoCancelar";
-            this.categoriaBotaoCancelar.Size = new System.Drawing.Size(93, 29);
-            this.categoriaBotaoCancelar.TabIndex = 10;
-            this.categoriaBotaoCancelar.Text = "Cancelar";
-            this.categoriaBotaoCancelar.UseVisualStyleBackColor = true;
-            this.categoriaBotaoCancelar.Visible = false;
-            this.categoriaBotaoCancelar.Click += new System.EventHandler(this.categoriaBotaoCancelar_Click);
+            this.btnCancelar.Location = new System.Drawing.Point(457, 437);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(93, 29);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // categoriaGroupInfo
+            // grpCategoria
             // 
-            this.categoriaGroupInfo.Controls.Add(this.categoriaCheckStatus);
-            this.categoriaGroupInfo.Controls.Add(this.categoriaLabelStatus);
-            this.categoriaGroupInfo.Controls.Add(this.categoriaRadioTipoDespesa);
-            this.categoriaGroupInfo.Controls.Add(this.categoriaRadioTipoReceita);
-            this.categoriaGroupInfo.Controls.Add(this.categoriaLabelTipo);
-            this.categoriaGroupInfo.Controls.Add(this.categoriaTextDescricao);
-            this.categoriaGroupInfo.Controls.Add(this.categoriaTextNome);
-            this.categoriaGroupInfo.Controls.Add(this.categoriaLabelDescricao);
-            this.categoriaGroupInfo.Controls.Add(this.categoriaLabelNome);
-            this.categoriaGroupInfo.Enabled = false;
-            this.categoriaGroupInfo.Location = new System.Drawing.Point(12, 7);
-            this.categoriaGroupInfo.Name = "categoriaGroupInfo";
-            this.categoriaGroupInfo.Size = new System.Drawing.Size(539, 202);
-            this.categoriaGroupInfo.TabIndex = 14;
-            this.categoriaGroupInfo.TabStop = false;
+            this.grpCategoria.Controls.Add(this.categoriaCheckStatus);
+            this.grpCategoria.Controls.Add(this.categoriaLabelStatus);
+            this.grpCategoria.Controls.Add(this.categoriaRadioTipoDespesa);
+            this.grpCategoria.Controls.Add(this.categoriaRadioTipoReceita);
+            this.grpCategoria.Controls.Add(this.categoriaLabelTipo);
+            this.grpCategoria.Controls.Add(this.categoriaTextDescricao);
+            this.grpCategoria.Controls.Add(this.categoriaTextNome);
+            this.grpCategoria.Controls.Add(this.categoriaLabelDescricao);
+            this.grpCategoria.Controls.Add(this.categoriaLabelNome);
+            this.grpCategoria.Enabled = false;
+            this.grpCategoria.Location = new System.Drawing.Point(12, 7);
+            this.grpCategoria.Name = "grpCategoria";
+            this.grpCategoria.Size = new System.Drawing.Size(539, 202);
+            this.grpCategoria.TabIndex = 14;
+            this.grpCategoria.TabStop = false;
             // 
             // categoriaCheckStatus
             // 
@@ -128,7 +128,6 @@ namespace SistemaFinanceiroFormularios
             this.categoriaCheckStatus.TabIndex = 5;
             this.categoriaCheckStatus.Text = "Ativa";
             this.categoriaCheckStatus.UseVisualStyleBackColor = true;
-            this.categoriaCheckStatus.CheckedChanged += new System.EventHandler(this.categoriaCheckStatus_CheckedChanged);
             // 
             // categoriaLabelStatus
             // 
@@ -205,37 +204,37 @@ namespace SistemaFinanceiroFormularios
             this.categoriaLabelNome.TabIndex = 9;
             this.categoriaLabelNome.Text = "Nome";
             // 
-            // Categoria
+            // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 258);
-            this.Controls.Add(this.categoriaGroupInfo);
-            this.Controls.Add(this.categoriaBotaoCancelar);
-            this.Controls.Add(this.categoriaBotaoSalvar);
-            this.Controls.Add(this.categoriaBotaoExcluir);
-            this.Controls.Add(this.categoriaBotaoAlterar);
-            this.Controls.Add(this.categoriaBotaoNovo);
+            this.ClientSize = new System.Drawing.Size(562, 478);
+            this.Controls.Add(this.grpCategoria);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btnNovo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Categoria";
+            this.Name = "frmCategoria";
             this.Text = "Categoria";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Categoria_FormClosing);
             this.Load += new System.EventHandler(this.Categoria_Load);
-            this.categoriaGroupInfo.ResumeLayout(false);
-            this.categoriaGroupInfo.PerformLayout();
+            this.grpCategoria.ResumeLayout(false);
+            this.grpCategoria.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button categoriaBotaoNovo;
-        private System.Windows.Forms.Button categoriaBotaoAlterar;
-        private System.Windows.Forms.Button categoriaBotaoExcluir;
-        private System.Windows.Forms.Button categoriaBotaoSalvar;
-        private System.Windows.Forms.Button categoriaBotaoCancelar;
-        private System.Windows.Forms.GroupBox categoriaGroupInfo;
+        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.GroupBox grpCategoria;
         private System.Windows.Forms.CheckBox categoriaCheckStatus;
         private System.Windows.Forms.Label categoriaLabelStatus;
         private System.Windows.Forms.RadioButton categoriaRadioTipoDespesa;

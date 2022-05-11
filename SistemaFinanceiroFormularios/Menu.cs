@@ -14,8 +14,8 @@ namespace SistemaFinanceiroFormularios
     public partial class Menu : Form
     {
         private int childFormNumber = 0;
-        private static Categoria formCategoria;
-        Thread categoria;
+        private static frmCategoria formCategoria;
+        Thread frmCategoria;
         private static bool hasFormCategoria = false;
 
         public static void SetHasFormCategoria(bool newHasFormCategoria)
@@ -121,7 +121,7 @@ namespace SistemaFinanceiroFormularios
         {
             if (formCategoria is null)
             {
-                formCategoria = new Categoria();
+                formCategoria = new frmCategoria();
                 formCategoria.FormClosed += new FormClosedEventHandler(Categoria_Closed);
             } else
             {
@@ -140,7 +140,7 @@ namespace SistemaFinanceiroFormularios
 
         private void AbrirCategoria(object obj)
         {
-            Application.Run(new Categoria());
+            Application.Run(new frmCategoria());
 
         }
 
