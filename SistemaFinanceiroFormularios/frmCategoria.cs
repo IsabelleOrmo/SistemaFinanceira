@@ -133,7 +133,7 @@ namespace SistemaFinanceiroFormularios
             dgCategoria.AllowUserToAddRows = false;
             dgCategoria.AllowUserToDeleteRows = false;
             dgCategoria.MultiSelect = false;
-            dgCategoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgCategoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // FullRow e LowTra
 
 
 
