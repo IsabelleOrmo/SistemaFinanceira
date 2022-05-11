@@ -44,7 +44,9 @@ namespace SistemaFinanceiroFormularios
             this.categoriaTextNome = new System.Windows.Forms.TextBox();
             this.categoriaLabelDescricao = new System.Windows.Forms.Label();
             this.categoriaLabelNome = new System.Windows.Forms.Label();
+            this.dgCategoria = new System.Windows.Forms.DataGridView();
             this.grpCategoria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCategoria)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNovo
@@ -69,7 +71,7 @@ namespace SistemaFinanceiroFormularios
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(259, 437);
+            this.btnExcluir.Location = new System.Drawing.Point(294, 437);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(93, 29);
             this.btnExcluir.TabIndex = 8;
@@ -79,7 +81,7 @@ namespace SistemaFinanceiroFormularios
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(358, 437);
+            this.btnSalvar.Location = new System.Drawing.Point(393, 437);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(93, 29);
             this.btnSalvar.TabIndex = 9;
@@ -90,7 +92,7 @@ namespace SistemaFinanceiroFormularios
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(457, 437);
+            this.btnCancelar.Location = new System.Drawing.Point(492, 437);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(93, 29);
             this.btnCancelar.TabIndex = 10;
@@ -113,7 +115,7 @@ namespace SistemaFinanceiroFormularios
             this.grpCategoria.Enabled = false;
             this.grpCategoria.Location = new System.Drawing.Point(12, 7);
             this.grpCategoria.Name = "grpCategoria";
-            this.grpCategoria.Size = new System.Drawing.Size(539, 202);
+            this.grpCategoria.Size = new System.Drawing.Size(573, 202);
             this.grpCategoria.TabIndex = 14;
             this.grpCategoria.TabStop = false;
             // 
@@ -175,7 +177,7 @@ namespace SistemaFinanceiroFormularios
             this.categoriaTextDescricao.MaxLength = 100;
             this.categoriaTextDescricao.Multiline = true;
             this.categoriaTextDescricao.Name = "categoriaTextDescricao";
-            this.categoriaTextDescricao.Size = new System.Drawing.Size(451, 74);
+            this.categoriaTextDescricao.Size = new System.Drawing.Size(490, 74);
             this.categoriaTextDescricao.TabIndex = 2;
             // 
             // categoriaTextNome
@@ -183,7 +185,7 @@ namespace SistemaFinanceiroFormularios
             this.categoriaTextNome.Location = new System.Drawing.Point(77, 13);
             this.categoriaTextNome.MaxLength = 50;
             this.categoriaTextNome.Name = "categoriaTextNome";
-            this.categoriaTextNome.Size = new System.Drawing.Size(451, 20);
+            this.categoriaTextNome.Size = new System.Drawing.Size(490, 20);
             this.categoriaTextNome.TabIndex = 0;
             // 
             // categoriaLabelDescricao
@@ -204,11 +206,21 @@ namespace SistemaFinanceiroFormularios
             this.categoriaLabelNome.TabIndex = 9;
             this.categoriaLabelNome.Text = "Nome";
             // 
+            // dgCategoria
+            // 
+            this.dgCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCategoria.Location = new System.Drawing.Point(12, 215);
+            this.dgCategoria.Name = "dgCategoria";
+            this.dgCategoria.Size = new System.Drawing.Size(573, 216);
+            this.dgCategoria.TabIndex = 15;
+            this.dgCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCategoria_CellContentClick);
+            // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 478);
+            this.ClientSize = new System.Drawing.Size(597, 478);
+            this.Controls.Add(this.dgCategoria);
             this.Controls.Add(this.grpCategoria);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -224,6 +236,7 @@ namespace SistemaFinanceiroFormularios
             this.Load += new System.EventHandler(this.Categoria_Load);
             this.grpCategoria.ResumeLayout(false);
             this.grpCategoria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCategoria)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,5 +257,6 @@ namespace SistemaFinanceiroFormularios
         private System.Windows.Forms.TextBox categoriaTextNome;
         private System.Windows.Forms.Label categoriaLabelDescricao;
         private System.Windows.Forms.Label categoriaLabelNome;
+        private System.Windows.Forms.DataGridView dgCategoria;
     }
 }

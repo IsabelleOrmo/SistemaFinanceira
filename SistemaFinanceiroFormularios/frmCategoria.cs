@@ -110,6 +110,33 @@ namespace SistemaFinanceiroFormularios
         
         private void Categoria_Load(object sender, EventArgs e)
         {
+            //magica. nao mexa.
+            dgCategoria.ColumnCount = 5;
+            dgCategoria.AutoGenerateColumns = false;
+            dgCategoria.Columns[0].Width = 50;
+            dgCategoria.Columns[0].HeaderText = "ID";
+            dgCategoria.Columns[0].DataPropertyName = "Id";
+            dgCategoria.Columns[0].Visible = false;
+            dgCategoria.Columns[1].Width = 200;
+            dgCategoria.Columns[1].HeaderText = "NOME";
+            dgCategoria.Columns[1].DataPropertyName = "Nome";
+            dgCategoria.Columns[2].Width = 400;
+            dgCategoria.Columns[2].HeaderText = "DESCRIÇÃO";
+            dgCategoria.Columns[2].DataPropertyName = "Descricao";
+            dgCategoria.Columns[3].Width = 50;
+            dgCategoria.Columns[3].HeaderText = "TIPO";
+            dgCategoria.Columns[3].DataPropertyName = "Tipo";
+            dgCategoria.Columns[4].Width = 50;
+            dgCategoria.Columns[4].HeaderText = "STATUS";
+            dgCategoria.Columns[4].DataPropertyName = "Status";
+
+            dgCategoria.AllowUserToAddRows = false;
+            dgCategoria.AllowUserToDeleteRows = false;
+            dgCategoria.MultiSelect = false;
+            dgCategoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+
+
             categoriaTextNome.Text = "Combustível";
             categoriaTextDescricao.Text = "Consumo de combustivéis em um ano pelo consumidor";
             categoriaRadioTipoDespesa.Checked = true;
@@ -120,6 +147,11 @@ namespace SistemaFinanceiroFormularios
         {
             MessageBox.Show("Registro salvo com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             CamposReset();
+        }
+
+        private void dgCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
