@@ -52,7 +52,7 @@ namespace SistemaFinanceiroFormularios
             this.categoriaBotaoNovo.Location = new System.Drawing.Point(12, 215);
             this.categoriaBotaoNovo.Name = "categoriaBotaoNovo";
             this.categoriaBotaoNovo.Size = new System.Drawing.Size(93, 29);
-            this.categoriaBotaoNovo.TabIndex = 9;
+            this.categoriaBotaoNovo.TabIndex = 6;
             this.categoriaBotaoNovo.Text = "Novo";
             this.categoriaBotaoNovo.UseVisualStyleBackColor = true;
             this.categoriaBotaoNovo.Click += new System.EventHandler(this.categoriaBotaoNovo_Click);
@@ -62,7 +62,7 @@ namespace SistemaFinanceiroFormularios
             this.categoriaBotaoAlterar.Location = new System.Drawing.Point(111, 215);
             this.categoriaBotaoAlterar.Name = "categoriaBotaoAlterar";
             this.categoriaBotaoAlterar.Size = new System.Drawing.Size(93, 29);
-            this.categoriaBotaoAlterar.TabIndex = 10;
+            this.categoriaBotaoAlterar.TabIndex = 7;
             this.categoriaBotaoAlterar.Text = "Alterar";
             this.categoriaBotaoAlterar.UseVisualStyleBackColor = true;
             this.categoriaBotaoAlterar.Click += new System.EventHandler(this.categoriaBotaoAlterar_Click);
@@ -72,10 +72,9 @@ namespace SistemaFinanceiroFormularios
             this.categoriaBotaoExcluir.Location = new System.Drawing.Point(259, 215);
             this.categoriaBotaoExcluir.Name = "categoriaBotaoExcluir";
             this.categoriaBotaoExcluir.Size = new System.Drawing.Size(93, 29);
-            this.categoriaBotaoExcluir.TabIndex = 11;
+            this.categoriaBotaoExcluir.TabIndex = 8;
             this.categoriaBotaoExcluir.Text = "Excluir";
             this.categoriaBotaoExcluir.UseVisualStyleBackColor = true;
-            this.categoriaBotaoExcluir.Visible = false;
             this.categoriaBotaoExcluir.Click += new System.EventHandler(this.categoriaBotaoExcluir_Click);
             // 
             // categoriaBotaoSalvar
@@ -83,7 +82,7 @@ namespace SistemaFinanceiroFormularios
             this.categoriaBotaoSalvar.Location = new System.Drawing.Point(358, 215);
             this.categoriaBotaoSalvar.Name = "categoriaBotaoSalvar";
             this.categoriaBotaoSalvar.Size = new System.Drawing.Size(93, 29);
-            this.categoriaBotaoSalvar.TabIndex = 12;
+            this.categoriaBotaoSalvar.TabIndex = 9;
             this.categoriaBotaoSalvar.Text = "Salvar";
             this.categoriaBotaoSalvar.UseVisualStyleBackColor = true;
             this.categoriaBotaoSalvar.Visible = false;
@@ -94,7 +93,7 @@ namespace SistemaFinanceiroFormularios
             this.categoriaBotaoCancelar.Location = new System.Drawing.Point(457, 215);
             this.categoriaBotaoCancelar.Name = "categoriaBotaoCancelar";
             this.categoriaBotaoCancelar.Size = new System.Drawing.Size(93, 29);
-            this.categoriaBotaoCancelar.TabIndex = 13;
+            this.categoriaBotaoCancelar.TabIndex = 10;
             this.categoriaBotaoCancelar.Text = "Cancelar";
             this.categoriaBotaoCancelar.UseVisualStyleBackColor = true;
             this.categoriaBotaoCancelar.Visible = false;
@@ -126,9 +125,10 @@ namespace SistemaFinanceiroFormularios
             this.categoriaCheckStatus.Location = new System.Drawing.Point(77, 174);
             this.categoriaCheckStatus.Name = "categoriaCheckStatus";
             this.categoriaCheckStatus.Size = new System.Drawing.Size(50, 17);
-            this.categoriaCheckStatus.TabIndex = 17;
+            this.categoriaCheckStatus.TabIndex = 5;
             this.categoriaCheckStatus.Text = "Ativa";
             this.categoriaCheckStatus.UseVisualStyleBackColor = true;
+            this.categoriaCheckStatus.CheckedChanged += new System.EventHandler(this.categoriaCheckStatus_CheckedChanged);
             // 
             // categoriaLabelStatus
             // 
@@ -145,7 +145,7 @@ namespace SistemaFinanceiroFormularios
             this.categoriaRadioTipoDespesa.Location = new System.Drawing.Point(170, 142);
             this.categoriaRadioTipoDespesa.Name = "categoriaRadioTipoDespesa";
             this.categoriaRadioTipoDespesa.Size = new System.Drawing.Size(67, 17);
-            this.categoriaRadioTipoDespesa.TabIndex = 15;
+            this.categoriaRadioTipoDespesa.TabIndex = 4;
             this.categoriaRadioTipoDespesa.TabStop = true;
             this.categoriaRadioTipoDespesa.Text = "Despesa";
             this.categoriaRadioTipoDespesa.UseVisualStyleBackColor = true;
@@ -156,7 +156,7 @@ namespace SistemaFinanceiroFormularios
             this.categoriaRadioTipoReceita.Location = new System.Drawing.Point(77, 142);
             this.categoriaRadioTipoReceita.Name = "categoriaRadioTipoReceita";
             this.categoriaRadioTipoReceita.Size = new System.Drawing.Size(62, 17);
-            this.categoriaRadioTipoReceita.TabIndex = 14;
+            this.categoriaRadioTipoReceita.TabIndex = 3;
             this.categoriaRadioTipoReceita.TabStop = true;
             this.categoriaRadioTipoReceita.Text = "Receita";
             this.categoriaRadioTipoReceita.UseVisualStyleBackColor = true;
@@ -173,17 +173,19 @@ namespace SistemaFinanceiroFormularios
             // categoriaTextDescricao
             // 
             this.categoriaTextDescricao.Location = new System.Drawing.Point(77, 50);
+            this.categoriaTextDescricao.MaxLength = 100;
             this.categoriaTextDescricao.Multiline = true;
             this.categoriaTextDescricao.Name = "categoriaTextDescricao";
             this.categoriaTextDescricao.Size = new System.Drawing.Size(451, 74);
-            this.categoriaTextDescricao.TabIndex = 12;
+            this.categoriaTextDescricao.TabIndex = 2;
             // 
             // categoriaTextNome
             // 
             this.categoriaTextNome.Location = new System.Drawing.Point(77, 13);
+            this.categoriaTextNome.MaxLength = 50;
             this.categoriaTextNome.Name = "categoriaTextNome";
             this.categoriaTextNome.Size = new System.Drawing.Size(451, 20);
-            this.categoriaTextNome.TabIndex = 11;
+            this.categoriaTextNome.TabIndex = 0;
             // 
             // categoriaLabelDescricao
             // 
@@ -214,8 +216,12 @@ namespace SistemaFinanceiroFormularios
             this.Controls.Add(this.categoriaBotaoExcluir);
             this.Controls.Add(this.categoriaBotaoAlterar);
             this.Controls.Add(this.categoriaBotaoNovo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Categoria";
-            this.Text = "categoria";
+            this.Text = "Categoria";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Categoria_FormClosing);
             this.Load += new System.EventHandler(this.Categoria_Load);
             this.categoriaGroupInfo.ResumeLayout(false);
             this.categoriaGroupInfo.PerformLayout();
