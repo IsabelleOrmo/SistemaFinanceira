@@ -113,7 +113,7 @@ namespace SistemaFinanceiroFormularios
                 CamposLimpar();
                 CamposReset();
 
-                Insercao = true;
+                Insercao = false;
                 Edicao = false;
             }
         }
