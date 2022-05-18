@@ -81,8 +81,8 @@ namespace SistemaFinanceiroFormularios
             categoriaBotaoExcluir.Visible = false;    // Ocultar o botão excluir
 
             // Definição das variáveis booleanas da classe
-            Insercao = true;
-            Edicao = false;
+            Insercao = false;
+            Edicao = true;
         }
 
 
