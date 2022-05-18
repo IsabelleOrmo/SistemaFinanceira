@@ -146,5 +146,10 @@ namespace SistemaFinanceiroFormularios
         {
 
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Feito por:\nIsabelle Ormo Crenonini - 201176\nPedro Augusto Lopes Ramos de Oliveira - 201290", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

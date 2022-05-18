@@ -20,3 +20,13 @@ C:\Users\Carla Oliveira\git\SisFin\SisFin\obj\Debug\SisFin.csproj.GenerateResour
 C:\Users\Carla Oliveira\git\SisFin\SisFin\obj\Debug\SisFin.csproj.CoreCompileInputs.cache
 C:\Users\Carla Oliveira\git\SisFin\SisFin\obj\Debug\SisFin.exe
 C:\Users\Carla Oliveira\git\SisFin\SisFin\obj\Debug\SisFin.pdb
+C:\Users\aluno.S2C59E5BEF3BC\Documents\sinfin\SisFin\bin\Debug\SisFin.exe.config
+C:\Users\aluno.S2C59E5BEF3BC\Documents\sinfin\SisFin\bin\Debug\SisFin.exe
+C:\Users\aluno.S2C59E5BEF3BC\Documents\sinfin\SisFin\bin\Debug\SisFin.pdb
+C:\Users\aluno.S2C59E5BEF3BC\Documents\sinfin\SisFin\obj\Debug\SisFin.csproj.AssemblyReference.cache
+C:\Users\aluno.S2C59E5BEF3BC\Documents\sinfin\SisFin\obj\Debug\SistemaFinanceiroFormularios.MenuPrincipal.resources
+C:\Users\aluno.S2C59E5BEF3BC\Documents\sinfin\SisFin\obj\Debug\SisFin.Properties.Resources.resources
+C:\Users\aluno.S2C59E5BEF3BC\Documents\sinfin\SisFin\obj\Debug\SisFin.csproj.GenerateResource.cache
+C:\Users\aluno.S2C59E5BEF3BC\Documents\sinfin\SisFin\obj\Debug\SisFin.csproj.CoreCompileInputs.cache
+C:\Users\aluno.S2C59E5BEF3BC\Documents\sinfin\SisFin\obj\Debug\SisFin.exe
+C:\Users\aluno.S2C59E5BEF3BC\Documents\sinfin\SisFin\obj\Debug\SisFin.pdb
