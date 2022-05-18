@@ -1,7 +1,7 @@
 ﻿
 namespace SistemaFinanceiroFormularios
 {
-    partial class Menu
+    partial class MenuPrincipal
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -30,7 +30,7 @@ namespace SistemaFinanceiroFormularios
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

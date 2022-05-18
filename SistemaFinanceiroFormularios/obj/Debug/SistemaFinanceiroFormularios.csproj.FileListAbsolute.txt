@@ -42,3 +42,15 @@ C:\Users\aluno\Source\Repos\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormula
 C:\Users\aluno\Source\Repos\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.csproj.CoreCompileInputs.cache
 C:\Users\aluno\Source\Repos\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.exe
 C:\Users\aluno\Source\Repos\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.pdb
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\bin\Debug\SistemaFinanceiroFormularios.exe.config
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\bin\Debug\SistemaFinanceiroFormularios.exe
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\bin\Debug\SistemaFinanceiroFormularios.pdb
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.csproj.AssemblyReference.cache
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.csproj.SuggestedBindingRedirects.cache
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.Menu.resources
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.Properties.Resources.resources
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.csproj.GenerateResource.cache
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.csproj.CoreCompileInputs.cache
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.exe
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.pdb
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.frmCategoria.resources

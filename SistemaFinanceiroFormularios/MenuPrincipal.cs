@@ -11,10 +11,10 @@ using System.Threading;
 
 namespace SistemaFinanceiroFormularios
 {
-    public partial class Menu : Form
+    public partial class MenuPrincipal : Form
     {
         private int childFormNumber = 0;
-        private static Categoria formCategoria;
+        private static frmCategoria formCategoria;
         Thread categoria;
         private static bool hasFormCategoria = false;
 
@@ -23,7 +23,7 @@ namespace SistemaFinanceiroFormularios
             hasFormCategoria = newHasFormCategoria;
         }
         
-        public Menu()
+        public MenuPrincipal()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
@@ -121,8 +121,8 @@ namespace SistemaFinanceiroFormularios
         {
             if (formCategoria is null)
             {
-                formCategoria = new Categoria();
-                formCategoria.FormClosed += new FormClosedEventHandler(Categoria_Closed);
+                formCategoria = new frmCategoria();
+                formCategoria.FormClosed += new FormClosedEventHandler(formCategoria_Closed);
             } else
             {
                 MessageBox.Show("Você já tem uma aba de categoria aberta!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -133,14 +133,14 @@ namespace SistemaFinanceiroFormularios
             formCategoria.Show();
         }
 
-        private void Categoria_Closed(object sender, FormClosedEventArgs e)
+        private void formCategoria_Closed(object sender, FormClosedEventArgs e)
         {
             formCategoria = null;
         }
 
         private void AbrirCategoria(object obj)
         {
-            Application.Run(new Categoria());
+            Application.Run(new frmCategoria());
 
         }
 

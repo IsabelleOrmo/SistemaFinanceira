@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace SistemaFinanceiroFormularios
 {
-    public partial class Categoria : Form
+    public partial class frmCategoria : Form
     {
         private bool Insercao = false;
         private bool Edicao = false;
 
-        public Categoria()
+        public frmCategoria()
         {
             InitializeComponent();
             
         }
 
-        private void Categoria_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmCategoria_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (Edicao || Insercao)
             {
@@ -55,16 +55,16 @@ namespace SistemaFinanceiroFormularios
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            grpCategoria.Enabled = true;        // Ativar a caixa de grupo
-            CamposLimpar();                           // Limpar campos do formulário
-            txtNome.Focus();                // Foco no campo Nome
+            grpCategoria.Enabled = true;   // Ativar a caixa de grupo
+            CamposLimpar();                // Limpar campos do formulário
+            txtNome.Focus();               // Foco no campo Nome
             btnNovo.Enabled = false;       // Desabilitar botão novo
             btnAlterar.Enabled = false;    // Desabiitar botão alterar
             btnCancelar.Visible = true;    // Tornar visível o botão cancelar
             btnSalvar.Visible = true;      // Tornar visível o botão salvar
             btnExcluir.Visible = false;    // Ocultar o botão excluir
 
-            chkAtiva.Checked = true;      // Automaticamente define o status como ativo
+            chkAtiva.Checked = true;       // Automaticamente define o status como ativo
             
             // Definição das variáveis booleanas da classe
             Insercao = true;
@@ -72,8 +72,8 @@ namespace SistemaFinanceiroFormularios
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            grpCategoria.Enabled = true;        // Ativa a caixa de grupo
-            txtNome.Focus();                // Foco no campo Nome
+            grpCategoria.Enabled = true;   // Ativa a caixa de grupo
+            txtNome.Focus();               // Foco no campo Nome
             btnAlterar.Enabled = false;    // Desabilitar o botão alterar
             btnNovo.Enabled = false;       // Ocultar o botão novo
             btnCancelar.Visible = true;    // Tornar visível o botão cancelar
@@ -84,7 +84,7 @@ namespace SistemaFinanceiroFormularios
             Insercao = false;
             Edicao = true;
         }
-
+        
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
@@ -109,7 +109,7 @@ namespace SistemaFinanceiroFormularios
             }
         }
         
-        private void Categoria_Load(object sender, EventArgs e)
+        private void frmCategoria_Load(object sender, EventArgs e)
         {
             txtNome.Text = "Combustível";
             txtDesc.Text = "Consumo de combustivéis em um ano pelo consumidor";
