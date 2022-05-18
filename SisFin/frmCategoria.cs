@@ -19,6 +19,8 @@ namespace SistemaFinanceiroFormularios
         private List<Categoria> lstCategoria = new List<Categoria>();
         private BindingSource bsCategoria;
 
+       
+
         public frmCategoria()
         {
             InitializeComponent();
@@ -33,6 +35,9 @@ namespace SistemaFinanceiroFormularios
                 e.Cancel = true;
                 MessageBox.Show("Rimani qui!", "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            if (Insercao)
+           
         }
 
         private void CamposLimpar()
@@ -161,8 +166,46 @@ namespace SistemaFinanceiroFormularios
 
         private void salvarCadastro(object sender, EventArgs e)
         {
+          
+            if (Insercao)
+            {
+                var nome = categoriaTextNome.Text.Trim();
+                var descr = categoriaTextDescricao.Text.Trim();
+                var tipo = categoriaRadioTipoReceita.Checked ? 1 : 2;
+                var status = categoriaCheckStatus.Checked ? 1 : 0;
+                categoria.AddToList(3, nome, descr, tipo, status);
+            }
+
+            if (Edicao)
+            {
+                Categoria ct = lstCategoria.Find(item => item.Nome == categoriaTextNome.Text.Trim());
+                if (ct != null)
+                {
+                    ct.Descricao = categoriaTextDescricao.Text.Trim();
+                    ct.Tipo = categoriaRadioTipoReceita.Checked ? 1 : 2;
+                    ct.Status = categoriaCheckStatus.Checked ? 1 : 0;
+                }
+
+            }
+
+            carregaGridCategoria();
+            
             MessageBox.Show("Registro salvo com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            CamposReset();
+            // nn sei se tem q por isso julgue depois gata  CamposReset();
+
+            btnNovo.Enabled = true;
+            btnNovo.Focus();
+            categoriaTextNome.Enabled = true;
+            grpCategoria.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnCancelar.Visible = false;
+            btnSalvar.Visible = false;
+            btnExcluir.Visible = true;
+            dgCategoria.Enabled = Capture; //novo
+
+            Insercao = false;
+            Edicao = false;
+
         }
 
         private void dgCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
