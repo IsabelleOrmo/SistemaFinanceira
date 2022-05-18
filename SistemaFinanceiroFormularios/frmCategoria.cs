@@ -60,9 +60,9 @@ namespace SistemaFinanceiroFormularios
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            grpCategoria.Enabled = true;        // Ativar a caixa de grupo
-            CamposLimpar();                           // Limpar campos do formulário
-            categoriaTextNome.Focus();                // Foco no campo Nome
+            grpCategoria.Enabled = true;   // Ativar a caixa de grupo
+            CamposLimpar();                // Limpar campos do formulário
+            categoriaTextNome.Focus();     // Foco no campo Nome
             btnNovo.Enabled = false;       // Desabilitar botão novo
             btnAlterar.Enabled = false;    // Desabiitar botão alterar
             btnCancelar.Visible = true;    // Tornar visível o botão cancelar
@@ -77,8 +77,8 @@ namespace SistemaFinanceiroFormularios
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            grpCategoria.Enabled = true;        // Ativa a caixa de grupo
-            categoriaTextNome.Focus();                // Foco no campo Nome
+            grpCategoria.Enabled = true;   // Ativa a caixa de grupo
+            categoriaTextNome.Focus();     // Foco no campo Nome
             btnAlterar.Enabled = false;    // Desabilitar o botão alterar
             btnNovo.Enabled = false;       // Ocultar o botão novo
             btnCancelar.Visible = true;    // Tornar visível o botão cancelar
