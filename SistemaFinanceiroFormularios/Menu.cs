@@ -125,6 +125,7 @@ namespace SistemaFinanceiroFormularios
                 formCategoria.FormClosed += new FormClosedEventHandler(Categoria_Closed);
             } else
             {
+                MessageBox.Show("Você já tem uma aba de categoria aberta!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 formCategoria.Activate();
             }
 
