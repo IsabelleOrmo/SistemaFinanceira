@@ -21,7 +21,7 @@ namespace SistemaFinanceiroFormularios
             
         }
 
-        private void frmCategoria_FormClosing(object sender, FormClosingEventArgs e)
+        private void fechaForm(object sender, FormClosingEventArgs e)
         {
             if (Edicao || Insercao)
             {
@@ -62,7 +62,7 @@ namespace SistemaFinanceiroFormularios
             btnNovo.Focus();
         }
 
-        private void btnNovo_Click(object sender, EventArgs e)
+        private void novoRegistro(object sender, EventArgs e)
         {
             grpCategoria.Enabled = true;   // Ativar a caixa de grupo
             CamposLimpar();                // Limpar campos do formulário
@@ -79,7 +79,7 @@ namespace SistemaFinanceiroFormularios
             Insercao = true;
             Edicao = false;
         }
-        private void btnAlterar_Click(object sender, EventArgs e)
+        private void altCadastro(object sender, EventArgs e)
         {
             grpCategoria.Enabled = true;   // Ativa a caixa de grupo
             txtNome.Focus();               // Foco no campo Nome
@@ -95,7 +95,7 @@ namespace SistemaFinanceiroFormularios
         }
         
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void exclCadastro(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja mesmo excluir essa entrada?", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
@@ -106,7 +106,7 @@ namespace SistemaFinanceiroFormularios
         }
 
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void cancCadastro(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja mesmo cancelar?", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -126,7 +126,7 @@ namespace SistemaFinanceiroFormularios
             chkAtiva.Checked = true;
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void salvarCadastro(object sender, EventArgs e)
         {
             MessageBox.Show("Registro salvo com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             CamposReset();
