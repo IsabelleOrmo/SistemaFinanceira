@@ -41,28 +41,28 @@ namespace SistemaFinanceiroFormularios
 
         private void CamposReset()
         {
-            categoriaGroupInfo.Enabled = false;
-            categoriaBotaoAlterar.Enabled = true;
-            categoriaBotaoNovo.Enabled = true;
-            categoriaBotaoCancelar.Visible = false;
-            categoriaBotaoSalvar.Visible = false;
-            categoriaBotaoExcluir.Visible = true;
+            grpCategoria.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnNovo.Enabled = true;
+            btnCancelar.Visible = false;
+            btnSalvar.Visible = false;
+            btnExcluir.Visible = true;
             Insercao = false;
             Edicao = false;
 
-            categoriaBotaoNovo.Focus();
+            btnNovo.Focus();
         }
 
-        private void categoriaBotaoNovo_Click(object sender, EventArgs e)
+        private void btnNovo_Click(object sender, EventArgs e)
         {
-            categoriaGroupInfo.Enabled = true;        // Ativar a caixa de grupo
+            grpCategoria.Enabled = true;        // Ativar a caixa de grupo
             CamposLimpar();                           // Limpar campos do formulário
             categoriaTextNome.Focus();                // Foco no campo Nome
-            categoriaBotaoNovo.Enabled = false;       // Desabilitar botão novo
-            categoriaBotaoAlterar.Enabled = false;    // Desabiitar botão alterar
-            categoriaBotaoCancelar.Visible = true;    // Tornar visível o botão cancelar
-            categoriaBotaoSalvar.Visible = true;      // Tornar visível o botão salvar
-            categoriaBotaoExcluir.Visible = false;    // Ocultar o botão excluir
+            btnNovo.Enabled = false;       // Desabilitar botão novo
+            btnAlterar.Enabled = false;    // Desabiitar botão alterar
+            btnCancelar.Visible = true;    // Tornar visível o botão cancelar
+            btnSalvar.Visible = true;      // Tornar visível o botão salvar
+            btnExcluir.Visible = false;    // Ocultar o botão excluir
 
             categoriaCheckStatus.Checked = true;      // Automaticamente define o status como ativo
             
@@ -70,15 +70,15 @@ namespace SistemaFinanceiroFormularios
             Insercao = true;
             Edicao = false;
         }
-        private void categoriaBotaoAlterar_Click(object sender, EventArgs e)
+        private void btnAlterar_Click(object sender, EventArgs e)
         {
-            categoriaGroupInfo.Enabled = true;        // Ativa a caixa de grupo
+            grpCategoria.Enabled = true;        // Ativa a caixa de grupo
             categoriaTextNome.Focus();                // Foco no campo Nome
-            categoriaBotaoAlterar.Enabled = false;    // Desabilitar o botão alterar
-            categoriaBotaoNovo.Enabled = false;       // Ocultar o botão novo
-            categoriaBotaoCancelar.Visible = true;    // Tornar visível o botão cancelar
-            categoriaBotaoSalvar.Visible = true;      // Tornar visível o botão salvar
-            categoriaBotaoExcluir.Visible = false;    // Ocultar o botão excluir
+            btnAlterar.Enabled = false;    // Desabilitar o botão alterar
+            btnNovo.Enabled = false;       // Ocultar o botão novo
+            btnCancelar.Visible = true;    // Tornar visível o botão cancelar
+            btnSalvar.Visible = true;      // Tornar visível o botão salvar
+            btnExcluir.Visible = false;    // Ocultar o botão excluir
 
             // Definição das variáveis booleanas da classe
             Insercao = true;
@@ -86,18 +86,18 @@ namespace SistemaFinanceiroFormularios
         }
 
 
-        private void categoriaBotaoExcluir_Click(object sender, EventArgs e)
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja mesmo excluir essa entrada?", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 CamposLimpar();
                 MessageBox.Show("Registro excluído com sucesso.", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                categoriaBotaoNovo.Focus();
+                btnNovo.Focus();
             }
         }
 
 
-        private void categoriaBotaoCancelar_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja mesmo cancelar?", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -117,7 +117,7 @@ namespace SistemaFinanceiroFormularios
             categoriaCheckStatus.Checked = true;
         }
 
-        private void categoriaBotaoSalvar_Click(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Registro salvo com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             CamposReset();
