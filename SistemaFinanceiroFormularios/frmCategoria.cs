@@ -25,8 +25,17 @@ namespace SistemaFinanceiroFormularios
         {
             if (Edicao || Insercao)
             {
+                /* 
+                No começo eu queria muito trocar esse "Rimani qui!"; por achar que ele cobraria
+                até o nome das coisas perfeitamente igual.
+                Mas não acho que ele vai fazer isso mais, e, depois de tanto ver essa string,
+                passei a gostar dela, então, vai ficar aqui, mesmo. 
+
+                "Rimani qui!" it is.
+                */
                 e.Cancel = true;
                 MessageBox.Show("Rimani qui!", "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Não é lindo?
             }
         }
 
