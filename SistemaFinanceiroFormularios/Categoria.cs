@@ -32,11 +32,11 @@ namespace SistemaFinanceiroFormularios
 
         private void CamposLimpar()
         {
-            categoriaTextNome.Clear();
-            categoriaTextDescricao.Clear();
-            categoriaRadioTipoDespesa.Checked = false;
-            categoriaRadioTipoReceita.Checked = false;
-            categoriaCheckStatus.Checked = false;
+            txtNome.Clear();
+            txtDesc.Clear();
+            rdDespesa.Checked = false;
+            rdReceita.Checked = false;
+            chkAtiva.Checked = false;
         }
 
         private void CamposReset()
@@ -57,14 +57,14 @@ namespace SistemaFinanceiroFormularios
         {
             grpCategoria.Enabled = true;        // Ativar a caixa de grupo
             CamposLimpar();                           // Limpar campos do formulário
-            categoriaTextNome.Focus();                // Foco no campo Nome
+            txtNome.Focus();                // Foco no campo Nome
             btnNovo.Enabled = false;       // Desabilitar botão novo
             btnAlterar.Enabled = false;    // Desabiitar botão alterar
             btnCancelar.Visible = true;    // Tornar visível o botão cancelar
             btnSalvar.Visible = true;      // Tornar visível o botão salvar
             btnExcluir.Visible = false;    // Ocultar o botão excluir
 
-            categoriaCheckStatus.Checked = true;      // Automaticamente define o status como ativo
+            chkAtiva.Checked = true;      // Automaticamente define o status como ativo
             
             // Definição das variáveis booleanas da classe
             Insercao = true;
@@ -73,7 +73,7 @@ namespace SistemaFinanceiroFormularios
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             grpCategoria.Enabled = true;        // Ativa a caixa de grupo
-            categoriaTextNome.Focus();                // Foco no campo Nome
+            txtNome.Focus();                // Foco no campo Nome
             btnAlterar.Enabled = false;    // Desabilitar o botão alterar
             btnNovo.Enabled = false;       // Ocultar o botão novo
             btnCancelar.Visible = true;    // Tornar visível o botão cancelar
@@ -111,10 +111,10 @@ namespace SistemaFinanceiroFormularios
         
         private void Categoria_Load(object sender, EventArgs e)
         {
-            categoriaTextNome.Text = "Combustível";
-            categoriaTextDescricao.Text = "Consumo de combustivéis em um ano pelo consumidor";
-            categoriaRadioTipoDespesa.Checked = true;
-            categoriaCheckStatus.Checked = true;
+            txtNome.Text = "Combustível";
+            txtDesc.Text = "Consumo de combustivéis em um ano pelo consumidor";
+            rdDespesa.Checked = true;
+            chkAtiva.Checked = true;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -123,7 +123,7 @@ namespace SistemaFinanceiroFormularios
             CamposReset();
         }
 
-        private void categoriaCheckStatus_CheckedChanged(object sender, EventArgs e)
+        private void chkAtiva_CheckedChanged(object sender, EventArgs e)
         {
 
         }
