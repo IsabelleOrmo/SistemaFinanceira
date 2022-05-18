@@ -57,7 +57,7 @@ namespace SistemaFinanceiroFormularios
             this.btnNovo.TabIndex = 6;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            this.btnNovo.Click += new System.EventHandler(this.novoRegistro);
             // 
             // btnAlterar
             // 
@@ -67,7 +67,7 @@ namespace SistemaFinanceiroFormularios
             this.btnAlterar.TabIndex = 7;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            this.btnAlterar.Click += new System.EventHandler(this.altRegistro);
             // 
             // btnExcluir
             // 
@@ -77,7 +77,7 @@ namespace SistemaFinanceiroFormularios
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            this.btnExcluir.Click += new System.EventHandler(this.exclCadastro);
             // 
             // btnSalvar
             // 
@@ -88,7 +88,7 @@ namespace SistemaFinanceiroFormularios
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Visible = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnSalvar.Click += new System.EventHandler(this.salvarCadastro);
             // 
             // btnCancelar
             // 
@@ -99,7 +99,7 @@ namespace SistemaFinanceiroFormularios
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Visible = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.cancCadastro);
             // 
             // grpCategoria
             // 
@@ -232,7 +232,7 @@ namespace SistemaFinanceiroFormularios
             this.MinimizeBox = false;
             this.Name = "frmCategoria";
             this.Text = "Categoria";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Categoria_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fechaForm);
             this.Load += new System.EventHandler(this.Categoria_Load);
             this.grpCategoria.ResumeLayout(false);
             this.grpCategoria.PerformLayout();
