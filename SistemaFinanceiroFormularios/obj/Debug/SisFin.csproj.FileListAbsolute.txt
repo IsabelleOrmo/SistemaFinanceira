@@ -1,0 +1,11 @@
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\bin\Debug\SisFin.exe.config
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\bin\Debug\SisFin.exe
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\bin\Debug\SisFin.pdb
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SisFin.csproj.AssemblyReference.cache
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SisFin.csproj.SuggestedBindingRedirects.cache
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SistemaFinanceiroFormularios.MenuPrincipal.resources
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SisFin.Properties.Resources.resources
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SisFin.csproj.GenerateResource.cache
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SisFin.csproj.CoreCompileInputs.cache
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SisFin.exe
+C:\Users\Carla Oliveira\git\OrmoMeida\SistemaFinanceira\SistemaFinanceiroFormularios\obj\Debug\SisFin.pdb
