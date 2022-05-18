@@ -23,7 +23,7 @@ namespace SistemaFinanceiroFormularios
         {
             InitializeComponent();
             lstCategoria = categoria.GeraCategorias();
-            
+
         }
 
         private void Categoria_FormClosing(object sender, FormClosingEventArgs e)
@@ -70,7 +70,7 @@ namespace SistemaFinanceiroFormularios
             btnExcluir.Visible = false;    // Ocultar o botão excluir
 
             categoriaCheckStatus.Checked = true;      // Automaticamente define o status como ativo
-            
+
             // Definição das variáveis booleanas da classe
             Insercao = true;
             Edicao = false;
@@ -86,8 +86,8 @@ namespace SistemaFinanceiroFormularios
             btnExcluir.Visible = false;    // Ocultar o botão excluir
 
             // Definição das variáveis booleanas da classe
-            Insercao = true;
-            Edicao = false;
+            Insercao = false;
+            Edicao = true;
         }
 
 
@@ -112,7 +112,7 @@ namespace SistemaFinanceiroFormularios
                 Edicao = false;
             }
         }
-        
+
         private void Categoria_Load(object sender, EventArgs e)
         {
             //magica. nao mexa.

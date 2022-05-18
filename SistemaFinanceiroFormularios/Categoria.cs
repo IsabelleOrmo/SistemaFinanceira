@@ -22,7 +22,7 @@ namespace SistemaFinanceiroFormularios
 
         }
 
-        public Categoria( int id, string nome, string descricao, int tipo, int status)
+        public Categoria(int id, string nome, string descricao, int tipo, int status)
         {
             Id = id;
             Nome = nome;

@@ -11,19 +11,12 @@ using System.Threading;
 
 namespace SistemaFinanceiroFormularios
 {
-    public partial class Menu : Form
+    public partial class MenuPrincipal : Form
     {
         private int childFormNumber = 0;
         private static frmCategoria formCategoria;
-        Thread frmCategoria;
-        private static bool hasFormCategoria = false;
 
-        public static void SetHasFormCategoria(bool newHasFormCategoria)
-        {
-            hasFormCategoria = newHasFormCategoria;
-        }
-        
-        public Menu()
+        public MenuPrincipal()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
