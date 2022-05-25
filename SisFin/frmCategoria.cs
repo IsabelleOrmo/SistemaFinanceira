@@ -105,17 +105,24 @@ namespace SistemaFinanceiroFormularios
         }
         private void altRegistro(object sender, EventArgs e)
         {
-            btnNovo.Enabled = false;
-            btnAlterar.Enabled = false;
-            grpCategoria.Enabled = true;
-            txtNome.Enabled = false;
-            txtDescricao.Focus();
-            btnSalvar.Visible = true;
-            btnCancelar.Visible = true;
-            btnExcluir.Visible = false;
-            dgCategoria.Enabled = false; //novo
-            Edicao = true;
-            Insercao = false;
+            if(lstCategoria.Count == 0)
+            {
+                btnNovo.Enabled = false;
+                btnAlterar.Enabled = false;
+                grpCategoria.Enabled = true;
+                txtNome.Enabled = false;
+                txtDescricao.Focus();
+                btnSalvar.Visible = true;
+                btnCancelar.Visible = true;
+                btnExcluir.Visible = false;
+                dgCategoria.Enabled = false; //novo
+                Edicao = true;
+                Insercao = false;
+            } else
+            {
+                MessageBox.Show("Não é possível alterar se não há nenhum registro no sistema!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
 
