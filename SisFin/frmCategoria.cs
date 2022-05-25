@@ -25,7 +25,36 @@ namespace SistemaFinanceiroFormularios
         {
             InitializeComponent();
             lstCategoria = categoria.GeraCategorias();
+        }
 
+        private void Categoria_Load(object sender, EventArgs e)
+        {
+            //magica. nao mexa.
+            dgCategoria.ColumnCount = 5;
+            dgCategoria.AutoGenerateColumns = false;
+            dgCategoria.Columns[0].Width = 50;
+            dgCategoria.Columns[0].HeaderText = "ID";
+            dgCategoria.Columns[0].DataPropertyName = "Id";
+            dgCategoria.Columns[0].Visible = false;
+            dgCategoria.Columns[1].Width = 200;
+            dgCategoria.Columns[1].HeaderText = "NOME";
+            dgCategoria.Columns[1].DataPropertyName = "Nome";
+            dgCategoria.Columns[2].Width = 400;
+            dgCategoria.Columns[2].HeaderText = "DESCRIÇÃO";
+            dgCategoria.Columns[2].DataPropertyName = "Descricao";
+            dgCategoria.Columns[3].Width = 50;
+            dgCategoria.Columns[3].HeaderText = "TIPO";
+            dgCategoria.Columns[3].DataPropertyName = "Tipo";
+            dgCategoria.Columns[4].Width = 50;
+            dgCategoria.Columns[4].HeaderText = "STATUS";
+            dgCategoria.Columns[4].DataPropertyName = "Status";
+
+            dgCategoria.AllowUserToAddRows = false;
+            dgCategoria.AllowUserToDeleteRows = false;
+            dgCategoria.MultiSelect = false;
+            dgCategoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // FullRow e LowTra
+
+            carregaGridCategoria();
         }
 
         private void fechaForm(object sender, FormClosingEventArgs e)
@@ -94,6 +123,7 @@ namespace SistemaFinanceiroFormularios
         {
             if (MessageBox.Show("Confirma exclusão?", "Aviso do sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+                dgCategoria.Rows.RemoveAt(dgCategoria.CurrentRow.Index);
                 MessageBox.Show("Registro excluído com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnNovo.Focus();
             }
@@ -118,6 +148,8 @@ namespace SistemaFinanceiroFormularios
             }
         }
 
+
+
         private void preencheCampos()
         {
             txtNome.Text = dgCategoria.Rows[dgCategoria.CurrentRow.Index].Cells[1].Value.ToString();
@@ -132,36 +164,6 @@ namespace SistemaFinanceiroFormularios
                 chkStatus.Checked = true;
             else
                 chkStatus.Checked = false;
-        }
-
-        private void Categoria_Load(object sender, EventArgs e)
-        {
-            //magica. nao mexa.
-            dgCategoria.ColumnCount = 5;
-            dgCategoria.AutoGenerateColumns = false;
-            dgCategoria.Columns[0].Width = 50;
-            dgCategoria.Columns[0].HeaderText = "ID";
-            dgCategoria.Columns[0].DataPropertyName = "Id";
-            dgCategoria.Columns[0].Visible = false;
-            dgCategoria.Columns[1].Width = 200;
-            dgCategoria.Columns[1].HeaderText = "NOME";
-            dgCategoria.Columns[1].DataPropertyName = "Nome";
-            dgCategoria.Columns[2].Width = 400;
-            dgCategoria.Columns[2].HeaderText = "DESCRIÇÃO";
-            dgCategoria.Columns[2].DataPropertyName = "Descricao";
-            dgCategoria.Columns[3].Width = 50;
-            dgCategoria.Columns[3].HeaderText = "TIPO";
-            dgCategoria.Columns[3].DataPropertyName = "Tipo";
-            dgCategoria.Columns[4].Width = 50;
-            dgCategoria.Columns[4].HeaderText = "STATUS";
-            dgCategoria.Columns[4].DataPropertyName = "Status";
-
-            dgCategoria.AllowUserToAddRows = false;
-            dgCategoria.AllowUserToDeleteRows = false;
-            dgCategoria.MultiSelect = false;
-            dgCategoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // FullRow e LowTra
-
-            carregaGridCategoria();
         }
 
         private void carregaGridCategoria()
