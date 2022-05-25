@@ -94,7 +94,6 @@ namespace SistemaFinanceiroFormularios
         {
             if (MessageBox.Show("Confirma exclusão?", "Aviso do sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                CamposLimpar();
                 MessageBox.Show("Registro excluído com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnNovo.Focus();
             }
@@ -104,12 +103,35 @@ namespace SistemaFinanceiroFormularios
         {
             if (MessageBox.Show("Deseja mesmo cancelar?", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                CamposLimpar();
                 CamposReset();
-
+                btnNovo.Enabled = true;
+                btnNovo.Focus();
+                grpCategoria.Enabled = false;
+                btnAlterar.Enabled = true;
+                btnCancelar.Visible = false;
+                btnSalvar.Visible = false;
+                btnExcluir.Visible = true;
+                dgCategoria.Enabled = true; //novo
                 Insercao = false;
                 Edicao = false;
+                preencheCampos();
             }
+        }
+
+        private void preencheCampos()
+        {
+            txtNome.Text = dgCategoria.Rows[dgCategoria.CurrentRow.Index].Cells[1].Value.ToString();
+            txtDescricao.Text = dgCategoria.Rows[dgCategoria.CurrentRow.Index].Cells[2].Value.ToString();
+
+            if (Convert.ToInt16(dgCategoria.Rows[dgCategoria.CurrentRow.Index].Cells[3].Value.ToString()) == 1)
+                rdReceita.Checked = true;
+            else
+                rdDespesa.Checked = true;
+
+            if (Convert.ToInt16(dgCategoria.Rows[dgCategoria.CurrentRow.Index].Cells[4].Value.ToString()) == 1)
+                chkStatus.Checked = true;
+            else
+                chkStatus.Checked = false;
         }
 
         private void Categoria_Load(object sender, EventArgs e)
