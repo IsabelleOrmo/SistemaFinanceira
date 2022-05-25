@@ -35,18 +35,15 @@ namespace SistemaFinanceiroFormularios
                 e.Cancel = true;
                 MessageBox.Show("Rimani qui!", "Aviso do sistema!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            if (Insercao)
-           
         }
 
         private void CamposLimpar()
         {
-            categoriaTextNome.Clear();
-            categoriaTextDescricao.Clear();
-            categoriaRadioTipoDespesa.Checked = false;
-            categoriaRadioTipoReceita.Checked = false;
-            categoriaCheckStatus.Checked = false;
+            txtNome.Clear();
+            txtDescricao.Clear();
+            rdDespesa.Checked = false;
+            rdReceita.Checked = false;
+            chkStatus.Checked = false;
         }
 
         private void CamposReset()
@@ -65,34 +62,31 @@ namespace SistemaFinanceiroFormularios
 
         private void novoRegistro(object sender, EventArgs e)
         {
-            grpCategoria.Enabled = true;   // Ativar a caixa de grupo
-            CamposLimpar();                // Limpar campos do formulário
-            categoriaTextNome.Focus();     // Foco no campo Nome
-            btnNovo.Enabled = false;       // Desabilitar botão novo
-            btnAlterar.Enabled = false;    // Desabiitar botão alterar
-            btnCancelar.Visible = true;    // Tornar visível o botão cancelar
-            btnSalvar.Visible = true;      // Tornar visível o botão salvar
-            btnExcluir.Visible = false;    // Ocultar o botão excluir
-
-            categoriaCheckStatus.Checked = true;      // Automaticamente define o status como ativo
-
-            // Definição das variáveis booleanas da classe
+            grpCategoria.Enabled = true;
+            CamposLimpar();
+            txtNome.Focus();
+            btnAlterar.Enabled = false;
+            btnCancelar.Visible = true;
+            btnSalvar.Visible = true;
+            btnExcluir.Visible = false;
+            btnNovo.Enabled = false;
+            dgCategoria.Enabled = false; //novo
             Insercao = true;
             Edicao = false;
         }
         private void altRegistro(object sender, EventArgs e)
         {
-            grpCategoria.Enabled = true;   // Ativa a caixa de grupo
-            categoriaTextNome.Focus();     // Foco no campo Nome
-            btnAlterar.Enabled = false;    // Desabilitar o botão alterar
-            btnNovo.Enabled = false;       // Ocultar o botão novo
-            btnCancelar.Visible = true;    // Tornar visível o botão cancelar
-            btnSalvar.Visible = true;      // Tornar visível o botão salvar
-            btnExcluir.Visible = false;    // Ocultar o botão excluir
-
-            // Definição das variáveis booleanas da classe
-            Insercao = false;
+            btnNovo.Enabled = false;
+            btnAlterar.Enabled = false;
+            grpCategoria.Enabled = true;
+            txtNome.Enabled = false;
+            txtDescricao.Focus();
+            btnSalvar.Visible = true;
+            btnCancelar.Visible = true;
+            btnExcluir.Visible = false;
+            dgCategoria.Enabled = false; //novo
             Edicao = true;
+            Insercao = false;
         }
 
 
@@ -146,13 +140,6 @@ namespace SistemaFinanceiroFormularios
             dgCategoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // FullRow e LowTra
 
             carregaGridCategoria();
-
-
-
-            categoriaTextNome.Text = "Combustível";
-            categoriaTextDescricao.Text = "Consumo de combustivéis em um ano pelo consumidor";
-            categoriaRadioTipoDespesa.Checked = true;
-            categoriaCheckStatus.Checked = true;
         }
 
         private void carregaGridCategoria()
@@ -169,21 +156,21 @@ namespace SistemaFinanceiroFormularios
           
             if (Insercao)
             {
-                var nome = categoriaTextNome.Text.Trim();
-                var descr = categoriaTextDescricao.Text.Trim();
-                var tipo = categoriaRadioTipoReceita.Checked ? 1 : 2;
-                var status = categoriaCheckStatus.Checked ? 1 : 0;
+                var nome = txtNome.Text.Trim();
+                var descr = txtDescricao.Text.Trim();
+                var tipo = rdReceita.Checked ? 1 : 2;
+                var status = chkStatus.Checked ? 1 : 0;
                 categoria.AddToList(3, nome, descr, tipo, status);
             }
 
             if (Edicao)
             {
-                Categoria ct = lstCategoria.Find(item => item.Nome == categoriaTextNome.Text.Trim());
+                Categoria ct = lstCategoria.Find(item => item.Nome == txtNome.Text.Trim());
                 if (ct != null)
                 {
-                    ct.Descricao = categoriaTextDescricao.Text.Trim();
-                    ct.Tipo = categoriaRadioTipoReceita.Checked ? 1 : 2;
-                    ct.Status = categoriaCheckStatus.Checked ? 1 : 0;
+                    ct.Descricao = txtDescricao.Text.Trim();
+                    ct.Tipo = rdReceita.Checked ? 1 : 2;
+                    ct.Status = chkStatus.Checked ? 1 : 0;
                 }
 
             }
@@ -195,17 +182,37 @@ namespace SistemaFinanceiroFormularios
 
             btnNovo.Enabled = true;
             btnNovo.Focus();
-            categoriaTextNome.Enabled = true;
+            txtNome.Enabled = true;
             grpCategoria.Enabled = false;
             btnAlterar.Enabled = true;
             btnCancelar.Visible = false;
             btnSalvar.Visible = false;
             btnExcluir.Visible = true;
-            dgCategoria.Enabled = Capture; //novo
+            dgCategoria.Enabled = true; //novo
 
             Insercao = false;
             Edicao = false;
 
+        }
+
+        // NOVO ====================
+        private void dgCategoria_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgCategoria.RowCount > 0)
+            {
+                txtNome.Text = dgCategoria.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtDescricao.Text = dgCategoria.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+                if (Convert.ToInt16(dgCategoria.Rows[e.RowIndex].Cells[3].Value.ToString()) == 1)
+                    rdReceita.Checked = true;
+                else
+                    rdDespesa.Checked = true;
+
+                if (Convert.ToInt16(dgCategoria.Rows[e.RowIndex].Cells[4].Value.ToString()) == 1)
+                    chkStatus.Checked = true;
+                else
+                    chkStatus.Checked = false;
+            }
         }
 
         private void dgCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)

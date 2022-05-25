@@ -35,13 +35,13 @@ namespace SistemaFinanceiroFormularios
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.grpCategoria = new System.Windows.Forms.GroupBox();
-            this.categoriaCheckStatus = new System.Windows.Forms.CheckBox();
+            this.chkStatus = new System.Windows.Forms.CheckBox();
             this.categoriaLabelStatus = new System.Windows.Forms.Label();
-            this.categoriaRadioTipoDespesa = new System.Windows.Forms.RadioButton();
-            this.categoriaRadioTipoReceita = new System.Windows.Forms.RadioButton();
+            this.rdDespesa = new System.Windows.Forms.RadioButton();
+            this.rdReceita = new System.Windows.Forms.RadioButton();
             this.categoriaLabelTipo = new System.Windows.Forms.Label();
-            this.categoriaTextDescricao = new System.Windows.Forms.TextBox();
-            this.categoriaTextNome = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.categoriaLabelDescricao = new System.Windows.Forms.Label();
             this.categoriaLabelNome = new System.Windows.Forms.Label();
             this.dgCategoria = new System.Windows.Forms.DataGridView();
@@ -103,13 +103,13 @@ namespace SistemaFinanceiroFormularios
             // 
             // grpCategoria
             // 
-            this.grpCategoria.Controls.Add(this.categoriaCheckStatus);
+            this.grpCategoria.Controls.Add(this.chkStatus);
             this.grpCategoria.Controls.Add(this.categoriaLabelStatus);
-            this.grpCategoria.Controls.Add(this.categoriaRadioTipoDespesa);
-            this.grpCategoria.Controls.Add(this.categoriaRadioTipoReceita);
+            this.grpCategoria.Controls.Add(this.rdDespesa);
+            this.grpCategoria.Controls.Add(this.rdReceita);
             this.grpCategoria.Controls.Add(this.categoriaLabelTipo);
-            this.grpCategoria.Controls.Add(this.categoriaTextDescricao);
-            this.grpCategoria.Controls.Add(this.categoriaTextNome);
+            this.grpCategoria.Controls.Add(this.txtDescricao);
+            this.grpCategoria.Controls.Add(this.txtNome);
             this.grpCategoria.Controls.Add(this.categoriaLabelDescricao);
             this.grpCategoria.Controls.Add(this.categoriaLabelNome);
             this.grpCategoria.Enabled = false;
@@ -119,17 +119,17 @@ namespace SistemaFinanceiroFormularios
             this.grpCategoria.TabIndex = 14;
             this.grpCategoria.TabStop = false;
             // 
-            // categoriaCheckStatus
+            // chkStatus
             // 
-            this.categoriaCheckStatus.AutoSize = true;
-            this.categoriaCheckStatus.Checked = true;
-            this.categoriaCheckStatus.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.categoriaCheckStatus.Location = new System.Drawing.Point(77, 174);
-            this.categoriaCheckStatus.Name = "categoriaCheckStatus";
-            this.categoriaCheckStatus.Size = new System.Drawing.Size(50, 17);
-            this.categoriaCheckStatus.TabIndex = 5;
-            this.categoriaCheckStatus.Text = "Ativa";
-            this.categoriaCheckStatus.UseVisualStyleBackColor = true;
+            this.chkStatus.AutoSize = true;
+            this.chkStatus.Checked = true;
+            this.chkStatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkStatus.Location = new System.Drawing.Point(77, 174);
+            this.chkStatus.Name = "chkStatus";
+            this.chkStatus.Size = new System.Drawing.Size(50, 17);
+            this.chkStatus.TabIndex = 5;
+            this.chkStatus.Text = "Ativa";
+            this.chkStatus.UseVisualStyleBackColor = true;
             // 
             // categoriaLabelStatus
             // 
@@ -140,27 +140,27 @@ namespace SistemaFinanceiroFormularios
             this.categoriaLabelStatus.TabIndex = 16;
             this.categoriaLabelStatus.Text = "Status";
             // 
-            // categoriaRadioTipoDespesa
+            // rdDespesa
             // 
-            this.categoriaRadioTipoDespesa.AutoSize = true;
-            this.categoriaRadioTipoDespesa.Location = new System.Drawing.Point(170, 142);
-            this.categoriaRadioTipoDespesa.Name = "categoriaRadioTipoDespesa";
-            this.categoriaRadioTipoDespesa.Size = new System.Drawing.Size(67, 17);
-            this.categoriaRadioTipoDespesa.TabIndex = 4;
-            this.categoriaRadioTipoDespesa.TabStop = true;
-            this.categoriaRadioTipoDespesa.Text = "Despesa";
-            this.categoriaRadioTipoDespesa.UseVisualStyleBackColor = true;
+            this.rdDespesa.AutoSize = true;
+            this.rdDespesa.Location = new System.Drawing.Point(170, 142);
+            this.rdDespesa.Name = "rdDespesa";
+            this.rdDespesa.Size = new System.Drawing.Size(67, 17);
+            this.rdDespesa.TabIndex = 4;
+            this.rdDespesa.TabStop = true;
+            this.rdDespesa.Text = "Despesa";
+            this.rdDespesa.UseVisualStyleBackColor = true;
             // 
-            // categoriaRadioTipoReceita
+            // rdReceita
             // 
-            this.categoriaRadioTipoReceita.AutoSize = true;
-            this.categoriaRadioTipoReceita.Location = new System.Drawing.Point(77, 142);
-            this.categoriaRadioTipoReceita.Name = "categoriaRadioTipoReceita";
-            this.categoriaRadioTipoReceita.Size = new System.Drawing.Size(62, 17);
-            this.categoriaRadioTipoReceita.TabIndex = 3;
-            this.categoriaRadioTipoReceita.TabStop = true;
-            this.categoriaRadioTipoReceita.Text = "Receita";
-            this.categoriaRadioTipoReceita.UseVisualStyleBackColor = true;
+            this.rdReceita.AutoSize = true;
+            this.rdReceita.Location = new System.Drawing.Point(77, 142);
+            this.rdReceita.Name = "rdReceita";
+            this.rdReceita.Size = new System.Drawing.Size(62, 17);
+            this.rdReceita.TabIndex = 3;
+            this.rdReceita.TabStop = true;
+            this.rdReceita.Text = "Receita";
+            this.rdReceita.UseVisualStyleBackColor = true;
             // 
             // categoriaLabelTipo
             // 
@@ -171,22 +171,22 @@ namespace SistemaFinanceiroFormularios
             this.categoriaLabelTipo.TabIndex = 13;
             this.categoriaLabelTipo.Text = "Tipo";
             // 
-            // categoriaTextDescricao
+            // txtDescricao
             // 
-            this.categoriaTextDescricao.Location = new System.Drawing.Point(77, 50);
-            this.categoriaTextDescricao.MaxLength = 100;
-            this.categoriaTextDescricao.Multiline = true;
-            this.categoriaTextDescricao.Name = "categoriaTextDescricao";
-            this.categoriaTextDescricao.Size = new System.Drawing.Size(490, 74);
-            this.categoriaTextDescricao.TabIndex = 2;
+            this.txtDescricao.Location = new System.Drawing.Point(77, 50);
+            this.txtDescricao.MaxLength = 100;
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(490, 74);
+            this.txtDescricao.TabIndex = 2;
             // 
-            // categoriaTextNome
+            // txtNome
             // 
-            this.categoriaTextNome.Location = new System.Drawing.Point(77, 13);
-            this.categoriaTextNome.MaxLength = 50;
-            this.categoriaTextNome.Name = "categoriaTextNome";
-            this.categoriaTextNome.Size = new System.Drawing.Size(490, 20);
-            this.categoriaTextNome.TabIndex = 0;
+            this.txtNome.Location = new System.Drawing.Point(77, 13);
+            this.txtNome.MaxLength = 50;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(490, 20);
+            this.txtNome.TabIndex = 0;
             // 
             // categoriaLabelDescricao
             // 
@@ -214,6 +214,7 @@ namespace SistemaFinanceiroFormularios
             this.dgCategoria.Size = new System.Drawing.Size(573, 216);
             this.dgCategoria.TabIndex = 15;
             this.dgCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCategoria_CellContentClick);
+            this.dgCategoria.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCategoria_RowEnter);
             // 
             // frmCategoria
             // 
@@ -248,13 +249,13 @@ namespace SistemaFinanceiroFormularios
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox grpCategoria;
-        private System.Windows.Forms.CheckBox categoriaCheckStatus;
+        private System.Windows.Forms.CheckBox chkStatus;
         private System.Windows.Forms.Label categoriaLabelStatus;
-        private System.Windows.Forms.RadioButton categoriaRadioTipoDespesa;
-        private System.Windows.Forms.RadioButton categoriaRadioTipoReceita;
+        private System.Windows.Forms.RadioButton rdDespesa;
+        private System.Windows.Forms.RadioButton rdReceita;
         private System.Windows.Forms.Label categoriaLabelTipo;
-        private System.Windows.Forms.TextBox categoriaTextDescricao;
-        private System.Windows.Forms.TextBox categoriaTextNome;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label categoriaLabelDescricao;
         private System.Windows.Forms.Label categoriaLabelNome;
         private System.Windows.Forms.DataGridView dgCategoria;
