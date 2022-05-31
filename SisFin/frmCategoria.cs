@@ -149,11 +149,12 @@ namespace SistemaFinanceiroFormularios
             if (!gridHasItems())
             { 
                 MessageBox.Show("Impossível excluir: tabela vazia.", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                emptinessChecker();
             } 
             else if (MessageBox.Show("Confirma exclusão?", "Aviso do sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                dgCategoria.Rows.RemoveAt(dgCategoria.CurrentRow.Index);
+                lstCategoria.RemoveAt(dgCategoria.CurrentRow.Index);
+                // dgCategoria.Rows.RemoveAt(dgCategoria.CurrentRow.Index);
+                carregaGridCategoria();
                 MessageBox.Show("Registro excluído com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnNovo.Focus();
                 emptinessChecker();
@@ -208,10 +209,9 @@ namespace SistemaFinanceiroFormularios
 
         private void salvarCadastro(object sender, EventArgs e)
         {
-          
             if (Insercao)
             {
-                var nome = txtNome.Text.Trim();
+                var nome = txtNome.Text.Trim(); // rubber duck debbuging
                 var descr = txtDescricao.Text.Trim();
                 var tipo = rdReceita.Checked ? 1 : 2;
                 var status = chkStatus.Checked ? 1 : 0;
