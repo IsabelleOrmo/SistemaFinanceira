@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaFinanceiroFormularios
@@ -21,7 +15,7 @@ namespace SistemaFinanceiroFormularios
         private List<Categoria> lstCategoria = new List<Categoria>();
         private BindingSource bsCategoria;
 
-       
+
 
         public frmCategoria()
         {
@@ -76,7 +70,7 @@ namespace SistemaFinanceiroFormularios
 
         private void emptyChecker()
         {
-            if (ButtonHiding) {return;} // Encerra função e a impede de fazer qualquer coisa
+            if (ButtonHiding) { return; } // Encerra função e a impede de fazer qualquer coisa
 
             if (hasGridItems())
             {
@@ -184,9 +178,9 @@ namespace SistemaFinanceiroFormularios
                 Edicao = false;
 
                 emptyChecker();
-                
-                if (hasGridItems()) {preencheCampos();}
-            } 
+
+                if (hasGridItems()) { preencheCampos(); }
+            }
         }
 
 
@@ -224,7 +218,7 @@ namespace SistemaFinanceiroFormularios
                 var descr = txtDescricao.Text.Trim();
                 var tipo = rdReceita.Checked ? 1 : 2;
                 var status = chkStatus.Checked ? 1 : 0;
-                categoria.AddToList(3, nome, descr, tipo, status);               
+                categoria.AddToList(3, nome, descr, tipo, status);
             }
 
             if (Edicao && emptyError())
@@ -239,7 +233,7 @@ namespace SistemaFinanceiroFormularios
             }
 
             carregaGridCategoria();
-            
+
             MessageBox.Show("Registro salvo com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             // nn sei se tem q por isso julgue depois gata  CamposReset();
 

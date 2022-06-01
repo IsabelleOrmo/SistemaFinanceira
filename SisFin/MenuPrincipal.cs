@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace SistemaFinanceiroFormularios
 {
@@ -116,7 +108,8 @@ namespace SistemaFinanceiroFormularios
             {
                 formCategoria = new frmCategoria();
                 formCategoria.FormClosed += new FormClosedEventHandler(Categoria_Closed);
-            } else
+            }
+            else
             {
                 MessageBox.Show("Você já tem uma aba de categoria aberta!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 formCategoria.Activate();
