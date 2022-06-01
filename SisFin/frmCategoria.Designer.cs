@@ -67,7 +67,7 @@ namespace SistemaFinanceiroFormularios
             this.btnAlterar.TabIndex = 7;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.altRegistro);
+            this.btnAlterar.Click += new System.EventHandler(this.alteraRegistro);
             // 
             // btnExcluir
             // 
@@ -77,7 +77,7 @@ namespace SistemaFinanceiroFormularios
             this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.exclCadastro);
+            this.btnExcluir.Click += new System.EventHandler(this.exclRegistro);
             // 
             // btnSalvar
             // 
@@ -88,7 +88,7 @@ namespace SistemaFinanceiroFormularios
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Visible = false;
-            this.btnSalvar.Click += new System.EventHandler(this.salvarCadastro);
+            this.btnSalvar.Click += new System.EventHandler(this.salvarRegistro);
             // 
             // btnCancelar
             // 
@@ -99,7 +99,7 @@ namespace SistemaFinanceiroFormularios
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Visible = false;
-            this.btnCancelar.Click += new System.EventHandler(this.cancCadastro);
+            this.btnCancelar.Click += new System.EventHandler(this.cancRegistro);
             // 
             // grpCategoria
             // 

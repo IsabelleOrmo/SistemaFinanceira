@@ -130,7 +130,7 @@ namespace SistemaFinanceiroFormularios
             Insercao = true;
             Edicao = false;
         }
-        private void altRegistro(object sender, EventArgs e)
+        private void alteraRegistro(object sender, EventArgs e)
         {
             if (emptyError())
             {
@@ -148,7 +148,7 @@ namespace SistemaFinanceiroFormularios
             }
         }
 
-        private void exclCadastro(object sender, EventArgs e)
+        private void exclRegistro(object sender, EventArgs e)
         {
             if (emptyError() && MessageBox.Show("Confirma exclusão?", "Aviso do sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
@@ -161,7 +161,7 @@ namespace SistemaFinanceiroFormularios
             }
         }
 
-        private void cancCadastro(object sender, EventArgs e)
+        private void cancRegistro(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja mesmo cancelar?", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -210,7 +210,7 @@ namespace SistemaFinanceiroFormularios
             dgCategoria.Refresh();
         }
 
-        private void salvarCadastro(object sender, EventArgs e)
+        private void salvarRegistro(object sender, EventArgs e)
         {
             if (Insercao)
             {

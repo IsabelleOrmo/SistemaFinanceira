@@ -102,7 +102,7 @@ namespace SistemaFinanceiroFormularios
             }
         }
 
-        private void MenuCadastroCategoria_Click(object sender, EventArgs e)
+        private void MenuRegistroCategoria_Click(object sender, EventArgs e)
         {
             if (formCategoria is null)
             {

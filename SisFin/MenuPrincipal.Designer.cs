@@ -71,9 +71,9 @@ namespace SistemaFinanceiroFormularios
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCadastro = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCadastroCategoria = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCadastroContas = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuRegistro = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuRegistroCategoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuRegistroContas = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -100,7 +100,7 @@ namespace SistemaFinanceiroFormularios
             this.toolsMenu,
             this.windowsMenu,
             this.helpMenu,
-            this.menuCadastro});
+            this.menuRegistro});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.MdiWindowListItem = this.windowsMenu;
             this.menuStrip.Name = "menuStrip";
@@ -434,27 +434,27 @@ namespace SistemaFinanceiroFormularios
             this.aboutToolStripMenuItem.Text = "&Sobre...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // menuCadastro
+            // menuRegistro
             // 
-            this.menuCadastro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuCadastroCategoria,
-            this.menuCadastroContas});
-            this.menuCadastro.Name = "menuCadastro";
-            this.menuCadastro.Size = new System.Drawing.Size(66, 20);
-            this.menuCadastro.Text = "&Cadastro";
+            this.menuRegistro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuRegistroCategoria,
+            this.menuRegistroContas});
+            this.menuRegistro.Name = "menuRegistro";
+            this.menuRegistro.Size = new System.Drawing.Size(66, 20);
+            this.menuRegistro.Text = "&Registro";
             // 
-            // menuCadastroCategoria
+            // menuRegistroCategoria
             // 
-            this.menuCadastroCategoria.Name = "menuCadastroCategoria";
-            this.menuCadastroCategoria.Size = new System.Drawing.Size(125, 22);
-            this.menuCadastroCategoria.Text = "Categoria";
-            this.menuCadastroCategoria.Click += new System.EventHandler(this.MenuCadastroCategoria_Click);
+            this.menuRegistroCategoria.Name = "menuRegistroCategoria";
+            this.menuRegistroCategoria.Size = new System.Drawing.Size(125, 22);
+            this.menuRegistroCategoria.Text = "Categoria";
+            this.menuRegistroCategoria.Click += new System.EventHandler(this.MenuRegistroCategoria_Click);
             // 
-            // menuCadastroContas
+            // menuRegistroContas
             // 
-            this.menuCadastroContas.Name = "menuCadastroContas";
-            this.menuCadastroContas.Size = new System.Drawing.Size(125, 22);
-            this.menuCadastroContas.Text = "Contas";
+            this.menuRegistroContas.Name = "menuRegistroContas";
+            this.menuRegistroContas.Size = new System.Drawing.Size(125, 22);
+            this.menuRegistroContas.Text = "Contas";
             // 
             // toolStrip
             // 
@@ -636,9 +636,9 @@ namespace SistemaFinanceiroFormularios
         private System.Windows.Forms.ToolStripButton printPreviewToolStripButton;
         private System.Windows.Forms.ToolStripButton helpToolStripButton;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripMenuItem menuCadastro;
-        private System.Windows.Forms.ToolStripMenuItem menuCadastroCategoria;
-        private System.Windows.Forms.ToolStripMenuItem menuCadastroContas;
+        private System.Windows.Forms.ToolStripMenuItem menuRegistro;
+        private System.Windows.Forms.ToolStripMenuItem menuRegistroCategoria;
+        private System.Windows.Forms.ToolStripMenuItem menuRegistroContas;
     }
 }
 
