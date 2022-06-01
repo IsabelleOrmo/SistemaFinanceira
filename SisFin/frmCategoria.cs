@@ -155,10 +155,12 @@ namespace SistemaFinanceiroFormularios
                 lstCategoria.RemoveAt(dgCategoria.CurrentRow.Index);
                 // dgCategoria.Rows.RemoveAt(dgCategoria.CurrentRow.Index);
                 carregaGridCategoria();
+                if (!hasGridItems()) {CamposLimpar();}
                 MessageBox.Show("Registro excluído com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnNovo.Focus();
                 emptyChecker();
-            }
+
+            } 
         }
 
         private void cancRegistro(object sender, EventArgs e)
