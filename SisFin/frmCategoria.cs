@@ -15,6 +15,8 @@ namespace SistemaFinanceiroFormularios
         private bool Insercao = false;
         private bool Edicao = false;
 
+        private bool ButtonHiding = true; // Define se os botões devem ser ocultados com a tela vazia
+
         private Categoria categoria = new Categoria();
         private List<Categoria> lstCategoria = new List<Categoria>();
         private BindingSource bsCategoria;
@@ -57,14 +59,26 @@ namespace SistemaFinanceiroFormularios
             carregaGridCategoria();
         }
 
-        private bool gridHasItems()
+        private bool hasGridItems()
         {
             return lstCategoria.Count > 0 && dgCategoria.RowCount > 0;
         }
 
-        private void emptinessChecker()
+        private bool emptyError()
         {
-            if (gridHasItems())
+            if (!hasGridItems())
+            {
+                MessageBox.Show("Impossível realizar ação: Tabela vazia", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return hasGridItems();
+        }
+
+        private void emptyChecker()
+        {
+            if (ButtonHiding) {return;} // Encerra função e a impede de fazer qualquer coisa
+
+            if (hasGridItems())
             {
                 btnAlterar.Enabled = true;
                 btnExcluir.Enabled = true;
@@ -124,7 +138,7 @@ namespace SistemaFinanceiroFormularios
         }
         private void altRegistro(object sender, EventArgs e)
         {
-            if (gridHasItems())
+            if (emptyError())
             {
                 btnNovo.Enabled = false;
                 btnAlterar.Enabled = false;
@@ -138,26 +152,18 @@ namespace SistemaFinanceiroFormularios
                 Edicao = true;
                 Insercao = false;
             }
-            else
-            {
-                MessageBox.Show("Não é possível alterar se não há nenhum registro no sistema!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void exclCadastro(object sender, EventArgs e)
         {
-            if (!gridHasItems())
-            { 
-                MessageBox.Show("Impossível excluir: tabela vazia.", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } 
-            else if (MessageBox.Show("Confirma exclusão?", "Aviso do sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (emptyError() && MessageBox.Show("Confirma exclusão?", "Aviso do sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 lstCategoria.RemoveAt(dgCategoria.CurrentRow.Index);
                 // dgCategoria.Rows.RemoveAt(dgCategoria.CurrentRow.Index);
                 carregaGridCategoria();
                 MessageBox.Show("Registro excluído com sucesso!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnNovo.Focus();
-                emptinessChecker();
+                emptyChecker();
             }
         }
 
@@ -176,8 +182,11 @@ namespace SistemaFinanceiroFormularios
                 dgCategoria.Enabled = true; //novo
                 Insercao = false;
                 Edicao = false;
-                preencheCampos();
-            }
+
+                emptyChecker();
+                
+                if (hasGridItems()) {preencheCampos();}
+            } 
         }
 
 
@@ -211,18 +220,14 @@ namespace SistemaFinanceiroFormularios
         {
             if (Insercao)
             {
-                var nome = txtNome.Text.Trim(); // rubber duck debbuging
+                var nome = txtNome.Text.Trim();
                 var descr = txtDescricao.Text.Trim();
                 var tipo = rdReceita.Checked ? 1 : 2;
                 var status = chkStatus.Checked ? 1 : 0;
                 categoria.AddToList(3, nome, descr, tipo, status);               
             }
 
-            if (!gridHasItems() && Edicao)
-            {
-                MessageBox.Show("Impossível editar: Tabela vazia!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } 
-            else if (Edicao)
+            if (Edicao && emptyError())
             {
                 Categoria ct = lstCategoria.Find(item => item.Nome == txtNome.Text.Trim());
                 if (ct != null)
@@ -251,14 +256,14 @@ namespace SistemaFinanceiroFormularios
             Insercao = false;
             Edicao = false;
 
-            emptinessChecker();
+            emptyChecker();
 
         }
 
         // NOVO ====================
         private void dgCategoria_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgCategoria.RowCount > 0)
+            if (hasGridItems())
             {
                 txtNome.Text = dgCategoria.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtDescricao.Text = dgCategoria.Rows[e.RowIndex].Cells[2].Value.ToString();
