@@ -42,7 +42,9 @@ namespace SisFin
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.dgContas = new System.Windows.Forms.DataGridView();
             this.gpBoxConta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgContas)).BeginInit();
             this.SuspendLayout();
             // 
             // labelNome
@@ -68,7 +70,7 @@ namespace SisFin
             this.gpBoxConta.Margin = new System.Windows.Forms.Padding(4);
             this.gpBoxConta.Name = "gpBoxConta";
             this.gpBoxConta.Padding = new System.Windows.Forms.Padding(4);
-            this.gpBoxConta.Size = new System.Drawing.Size(622, 184);
+            this.gpBoxConta.Size = new System.Drawing.Size(622, 230);
             this.gpBoxConta.TabIndex = 1;
             this.gpBoxConta.TabStop = false;
             this.gpBoxConta.Enter += new System.EventHandler(this.gpBoxConta_Enter);
@@ -76,7 +78,7 @@ namespace SisFin
             // checkBoxStatus
             // 
             this.checkBoxStatus.AutoSize = true;
-            this.checkBoxStatus.Location = new System.Drawing.Point(551, 153);
+            this.checkBoxStatus.Location = new System.Drawing.Point(551, 199);
             this.checkBoxStatus.Name = "checkBoxStatus";
             this.checkBoxStatus.Size = new System.Drawing.Size(64, 20);
             this.checkBoxStatus.TabIndex = 6;
@@ -86,7 +88,7 @@ namespace SisFin
             // comboBoxCategoria
             // 
             this.comboBoxCategoria.FormattingEnabled = true;
-            this.comboBoxCategoria.Location = new System.Drawing.Point(8, 153);
+            this.comboBoxCategoria.Location = new System.Drawing.Point(8, 199);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(345, 24);
             this.comboBoxCategoria.TabIndex = 5;
@@ -94,7 +96,7 @@ namespace SisFin
             // labelCategoria
             // 
             this.labelCategoria.AutoSize = true;
-            this.labelCategoria.Location = new System.Drawing.Point(5, 134);
+            this.labelCategoria.Location = new System.Drawing.Point(5, 180);
             this.labelCategoria.Name = "labelCategoria";
             this.labelCategoria.Size = new System.Drawing.Size(67, 16);
             this.labelCategoria.TabIndex = 4;
@@ -103,8 +105,9 @@ namespace SisFin
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(7, 94);
+            this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(608, 22);
+            this.txtDescricao.Size = new System.Drawing.Size(560, 71);
             this.txtDescricao.TabIndex = 3;
             // 
             // labelDescricao
@@ -127,7 +130,7 @@ namespace SisFin
             // 
             // btnNovo
             // 
-            this.btnNovo.Location = new System.Drawing.Point(12, 250);
+            this.btnNovo.Location = new System.Drawing.Point(12, 515);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(99, 38);
             this.btnNovo.TabIndex = 2;
@@ -136,7 +139,7 @@ namespace SisFin
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(118, 250);
+            this.btnAlterar.Location = new System.Drawing.Point(118, 515);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(99, 38);
             this.btnAlterar.TabIndex = 3;
@@ -145,7 +148,7 @@ namespace SisFin
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(431, 250);
+            this.btnExcluir.Location = new System.Drawing.Point(431, 515);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(99, 38);
             this.btnExcluir.TabIndex = 4;
@@ -154,7 +157,7 @@ namespace SisFin
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(536, 250);
+            this.btnCancelar.Location = new System.Drawing.Point(536, 515);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 38);
             this.btnCancelar.TabIndex = 5;
@@ -163,18 +166,27 @@ namespace SisFin
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(326, 250);
+            this.btnSalvar.Location = new System.Drawing.Point(326, 515);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(99, 38);
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
+            // dgContas
+            // 
+            this.dgContas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgContas.Location = new System.Drawing.Point(13, 251);
+            this.dgContas.Name = "dgContas";
+            this.dgContas.Size = new System.Drawing.Size(622, 258);
+            this.dgContas.TabIndex = 7;
+            // 
             // FrmConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 300);
+            this.ClientSize = new System.Drawing.Size(648, 565);
+            this.Controls.Add(this.dgContas);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnExcluir);
@@ -182,11 +194,16 @@ namespace SisFin
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.gpBoxConta);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmConta";
             this.Text = "FrmConta";
+            this.Load += new System.EventHandler(this.FrmConta_Load);
             this.gpBoxConta.ResumeLayout(false);
             this.gpBoxConta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgContas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +223,6 @@ namespace SisFin
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.DataGridView dgContas;
     }
 }
