@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SistemaFinanceiroFormularios
+namespace SisFin
 {
     public partial class MenuPrincipal : Form
     {
         private int childFormNumber = 0;
-        private static frmCategoria formCategoria;
+        private static FrmCategoria formCategoria;
+        private static FrmConta formConta;
 
         public MenuPrincipal()
         {
@@ -106,7 +107,7 @@ namespace SistemaFinanceiroFormularios
         {
             if (formCategoria is null)
             {
-                formCategoria = new frmCategoria();
+                formCategoria = new FrmCategoria();
                 formCategoria.FormClosed += new FormClosedEventHandler(Categoria_Closed);
             }
             else
@@ -119,6 +120,22 @@ namespace SistemaFinanceiroFormularios
             formCategoria.Show();
         }
 
+        private void menuRegistroContas_Click(object sender, EventArgs e)
+        {
+            if (formConta is null)
+            {
+                formConta = new FrmConta();
+            }
+            else
+            {
+                MessageBox.Show("Você já tem uma aba de conta aberta!", "Aviso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                formConta.Activate();
+            }
+
+            formConta.MdiParent = this;
+            formConta.Show();
+        }
+
         private void Categoria_Closed(object sender, FormClosedEventArgs e)
         {
             formCategoria = null;
@@ -126,7 +143,7 @@ namespace SistemaFinanceiroFormularios
 
         private void AbrirCategoria(object obj)
         {
-            Application.Run(new frmCategoria());
+            Application.Run(new FrmCategoria());
 
         }
 
@@ -144,5 +161,6 @@ namespace SistemaFinanceiroFormularios
         {
             MessageBox.Show("Feito por:\nIsabelle Ormo Crenonini - 201176\nPedro Augusto Lopes Ramos de Oliveira - 201290", "Aviso do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
     }
 }

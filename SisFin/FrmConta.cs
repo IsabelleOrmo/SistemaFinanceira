@@ -17,6 +17,9 @@ namespace SisFin
             InitializeComponent();
         }
 
-       
+        private void gpBoxConta_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

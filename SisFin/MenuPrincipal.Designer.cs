@@ -1,5 +1,5 @@
 ﻿
-namespace SistemaFinanceiroFormularios
+namespace SisFin
 {
     partial class MenuPrincipal
     {
@@ -403,7 +403,7 @@ namespace SistemaFinanceiroFormularios
             // 
             this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
             this.contentsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
-            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.contentsToolStripMenuItem.Text = "&Conteúdo";
             // 
             // indexToolStripMenuItem
@@ -411,7 +411,7 @@ namespace SistemaFinanceiroFormularios
             this.indexToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("indexToolStripMenuItem.Image")));
             this.indexToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            this.indexToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.indexToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.indexToolStripMenuItem.Text = "&Índice";
             // 
             // searchToolStripMenuItem
@@ -419,18 +419,18 @@ namespace SistemaFinanceiroFormularios
             this.searchToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("searchToolStripMenuItem.Image")));
             this.searchToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.searchToolStripMenuItem.Text = "&Procurar";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(170, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.aboutToolStripMenuItem.Text = "&Sobre...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -440,21 +440,22 @@ namespace SistemaFinanceiroFormularios
             this.menuRegistroCategoria,
             this.menuRegistroContas});
             this.menuRegistro.Name = "menuRegistro";
-            this.menuRegistro.Size = new System.Drawing.Size(66, 20);
+            this.menuRegistro.Size = new System.Drawing.Size(62, 20);
             this.menuRegistro.Text = "&Registro";
             // 
             // menuRegistroCategoria
             // 
             this.menuRegistroCategoria.Name = "menuRegistroCategoria";
-            this.menuRegistroCategoria.Size = new System.Drawing.Size(125, 22);
+            this.menuRegistroCategoria.Size = new System.Drawing.Size(180, 22);
             this.menuRegistroCategoria.Text = "Categoria";
             this.menuRegistroCategoria.Click += new System.EventHandler(this.MenuRegistroCategoria_Click);
             // 
             // menuRegistroContas
             // 
             this.menuRegistroContas.Name = "menuRegistroContas";
-            this.menuRegistroContas.Size = new System.Drawing.Size(125, 22);
+            this.menuRegistroContas.Size = new System.Drawing.Size(180, 22);
             this.menuRegistroContas.Text = "Contas";
+            this.menuRegistroContas.Click += new System.EventHandler(this.menuRegistroContas_Click);
             // 
             // toolStrip
             // 

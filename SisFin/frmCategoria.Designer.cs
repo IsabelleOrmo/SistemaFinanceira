@@ -1,7 +1,7 @@
 ﻿
-namespace SistemaFinanceiroFormularios
+namespace SisFin
 {
-    partial class frmCategoria
+    partial class FrmCategoria
     {
         /// <summary>
         /// Required designer variable.
@@ -216,7 +216,7 @@ namespace SistemaFinanceiroFormularios
             this.dgCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCategoria_CellContentClick);
             this.dgCategoria.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCategoria_RowEnter);
             // 
-            // frmCategoria
+            // FrmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -231,7 +231,7 @@ namespace SistemaFinanceiroFormularios
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCategoria";
+            this.Name = "FrmCategoria";
             this.Text = "Categoria";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fechaForm);
             this.Load += new System.EventHandler(this.Categoria_Load);

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace SistemaFinanceiroFormularios
+namespace SisFin
 {
-    public partial class frmCategoria : Form
+    public partial class FrmCategoria : Form
     {
         private bool Insercao = false;
         private bool Edicao = false;
@@ -17,7 +17,7 @@ namespace SistemaFinanceiroFormularios
 
 
 
-        public frmCategoria()
+        public FrmCategoria()
         {
             InitializeComponent();
             lstCategoria = categoria.GeraCategorias();

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SistemaFinanceiroFormularios
+namespace SisFin
 {
     static class Program
     {
