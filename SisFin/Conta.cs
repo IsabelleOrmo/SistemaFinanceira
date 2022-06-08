@@ -8,15 +8,15 @@ namespace SisFin
 {
     class Conta
     {
-        private int Id { get; set; }
-        private string Nome { get; set; }
-        private string Descricao { get; set; }
-        private int Id_Categoria { get; set; }
-        private int Status { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
+        public int Id_Categoria { get; set; }
+        public int Status { get; set; }
 
-        private List<Conta> lstConta = new List<Conta>();
+        public List<Conta> _lstConta = new List<Conta>();
 
-        public List<Conta> toList() { return lstConta; }
+        public List<Conta> toList() { return _lstConta; }
 
         public Conta() { }
 
@@ -31,15 +31,19 @@ namespace SisFin
 
         public void addToList(int id, string nome, string descricao, int id_Categoria, int status)
         {
-            lstConta.Add(new Conta(id, nome, descricao, id_Categoria, status));
+            _lstConta.Add(new Conta(id, nome, descricao, id_Categoria, status));
+        }
+
+        public void addToList(Conta conta)
+        {
+            _lstConta.Add(conta);
         }
 
         public List<Conta> GeraContas()
         {
-            addToList(1, "HRT", "Valor para ter uma vida minimamente decente", 4, 1);
-            addToList(2, "Transporte", "Valor da mensalidade do ônibus fretado", 2, 1);
-
-            return lstConta;
+            addToList(1, "Salário monitoria", "Valor correspondente ao salário das monitorias", 0, 1);
+            addToList(2, "Transporte", "Valor da mensalidade do ônibus fretado", 1, 1);
+            return _lstConta;
         }
     }
 }

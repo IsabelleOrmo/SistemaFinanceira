@@ -53,7 +53,7 @@ namespace SisFin
             this.labelNome.Location = new System.Drawing.Point(8, 17);
             this.labelNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(45, 16);
+            this.labelNome.Size = new System.Drawing.Size(44, 16);
             this.labelNome.TabIndex = 0;
             this.labelNome.Text = "Nome";
             // 
@@ -66,6 +66,7 @@ namespace SisFin
             this.gpBoxConta.Controls.Add(this.labelDescricao);
             this.gpBoxConta.Controls.Add(this.txtNome);
             this.gpBoxConta.Controls.Add(this.labelNome);
+            this.gpBoxConta.Enabled = false;
             this.gpBoxConta.Location = new System.Drawing.Point(13, 13);
             this.gpBoxConta.Margin = new System.Windows.Forms.Padding(4);
             this.gpBoxConta.Name = "gpBoxConta";
@@ -73,14 +74,13 @@ namespace SisFin
             this.gpBoxConta.Size = new System.Drawing.Size(622, 230);
             this.gpBoxConta.TabIndex = 1;
             this.gpBoxConta.TabStop = false;
-            this.gpBoxConta.Enter += new System.EventHandler(this.gpBoxConta_Enter);
             // 
             // checkBoxStatus
             // 
             this.checkBoxStatus.AutoSize = true;
             this.checkBoxStatus.Location = new System.Drawing.Point(551, 199);
             this.checkBoxStatus.Name = "checkBoxStatus";
-            this.checkBoxStatus.Size = new System.Drawing.Size(64, 20);
+            this.checkBoxStatus.Size = new System.Drawing.Size(63, 20);
             this.checkBoxStatus.TabIndex = 6;
             this.checkBoxStatus.Text = "Status";
             this.checkBoxStatus.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@ namespace SisFin
             this.labelCategoria.AutoSize = true;
             this.labelCategoria.Location = new System.Drawing.Point(5, 180);
             this.labelCategoria.Name = "labelCategoria";
-            this.labelCategoria.Size = new System.Drawing.Size(67, 16);
+            this.labelCategoria.Size = new System.Drawing.Size(66, 16);
             this.labelCategoria.TabIndex = 4;
             this.labelCategoria.Text = "Categoria";
             // 
@@ -116,7 +116,7 @@ namespace SisFin
             this.labelDescricao.Location = new System.Drawing.Point(8, 75);
             this.labelDescricao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDescricao.Name = "labelDescricao";
-            this.labelDescricao.Size = new System.Drawing.Size(70, 16);
+            this.labelDescricao.Size = new System.Drawing.Size(69, 16);
             this.labelDescricao.TabIndex = 2;
             this.labelDescricao.Text = "Descrição";
             // 
@@ -136,6 +136,7 @@ namespace SisFin
             this.btnNovo.TabIndex = 2;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnAlterar
             // 
@@ -145,15 +146,18 @@ namespace SisFin
             this.btnAlterar.TabIndex = 3;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.Location = new System.Drawing.Point(431, 515);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(99, 38);
             this.btnExcluir.TabIndex = 4;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCancelar
             // 
@@ -163,6 +167,8 @@ namespace SisFin
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Visible = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
@@ -172,6 +178,8 @@ namespace SisFin
             this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Visible = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // dgContas
             // 
@@ -180,6 +188,7 @@ namespace SisFin
             this.dgContas.Name = "dgContas";
             this.dgContas.Size = new System.Drawing.Size(622, 258);
             this.dgContas.TabIndex = 7;
+            this.dgContas.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgContas_RowEnter);
             // 
             // FrmConta
             // 
@@ -200,6 +209,7 @@ namespace SisFin
             this.MinimizeBox = false;
             this.Name = "FrmConta";
             this.Text = "FrmConta";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmConta_FormClosing);
             this.Load += new System.EventHandler(this.FrmConta_Load);
             this.gpBoxConta.ResumeLayout(false);
             this.gpBoxConta.PerformLayout();

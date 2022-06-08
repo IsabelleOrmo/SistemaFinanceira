@@ -125,6 +125,7 @@ namespace SisFin
             if (formConta is null)
             {
                 formConta = new FrmConta();
+                formConta.FormClosed += new FormClosedEventHandler(Conta_Closed);
             }
             else
             {
@@ -139,6 +140,11 @@ namespace SisFin
         private void Categoria_Closed(object sender, FormClosedEventArgs e)
         {
             formCategoria = null;
+        }
+
+        private void Conta_Closed(object sender, FormClosedEventArgs e)
+        {
+            formConta = null;
         }
 
         private void AbrirCategoria(object obj)

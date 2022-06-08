@@ -40,7 +40,6 @@ namespace SisFin
         public List<Categoria> GeraCategorias()
         {
             AddToList(1, "Salário", "Salário da UNICAMP", 1, 1);
-
             AddToList(1, "Combustível", "Despesas com combustível", 2, 1);
             return _lstCategoria;
         }
