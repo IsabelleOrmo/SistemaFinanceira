@@ -257,15 +257,9 @@ namespace SisFin
                 conta.addToList(insertConta);
             }
 
-            if (edicao && EmptyError())
+            if (edicao && !EmptyError())
             {
-                //  int editedItem = LstConta.IndexOf(LstConta.Find(item => item.Nome == txtNome.Text.Trim()));
-                // Conta editConta = LstConta.ElementAt(editedItem);
-
                 Conta editConta = LstConta.Find(item  => item.Nome == txtNome.Text.Trim());
-
-                // Aviso para o Matioli...
-                MessageBox.Show("Não consegui fazer o alterar funcionar, mas não é obrigatório, de qualquer jeito. Se puder olhar o código e me informar qual meu erro, agradeceria imensamente!", "Aviso da dupla", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 if (editConta != null)
                 {
@@ -273,7 +267,6 @@ namespace SisFin
                     editConta.Id_Categoria = comboBoxCategoria.SelectedIndex;
                     editConta.Status = checkBoxStatus.Checked ? 1 : 0;
                 }
-
             }
 
             CarregaGridContas();
