@@ -103,7 +103,7 @@ namespace SisFin
             dgContas.Columns[0].Width = 50;
             dgContas.Columns[0].HeaderText = "ID";
             dgContas.Columns[0].DataPropertyName = "Id";
-            /*dgContas.Columns[0].Visible = false;*/
+            dgContas.Columns[0].Visible = false;
             dgContas.Columns[1].Width = 250;
             dgContas.Columns[1].HeaderText = "NOME";
             dgContas.Columns[1].DataPropertyName = "Nome";
